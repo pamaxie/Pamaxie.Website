@@ -6,17 +6,11 @@
 }
 
 html {
-    font-family: Quicksand;
-}
-
-.test {
-    position: absolute !important;
-    left: 0 !important;
-    height: 100px !important;
+    font-family: Quicksand, serif;
 }
 
 .openDyslexic {
-    font-family: OpenDyslexic !important;
+    font-family: OpenDyslexic, serif !important;
 }
 
 ::-webkit-scrollbar {
@@ -28,16 +22,31 @@ html {
     background-color: #1F1F1F;
 }
 
-.bg-primary {
+.bg-primary,
+.hover\:bg-primary:hover {
     background: #484764;
 }
 
-.bg-secondary {
+.bg-secondary,
+.hover\:bg-secondary:hover {
     background: #3A3950;
 }
 
-.bg-tertiary {
+.bg-tertiary,
+.hover\:bg-tertiary:hover {
     background: #2D2C3E;
+}
+
+.border-primary {
+    border-color: #484764;
+}
+
+.border-secondary {
+    border-color: #3A3950;
+}
+
+.border-tertiary {
+    border-color: #2D2C3E;
 }
 
 .text-gray-primary {
@@ -52,9 +61,17 @@ html {
     font-size: 1.25rem;
 }
 
+.text-xxs {
+    font-size: 0.6rem;
+}
+
 .blur {
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px);
+}
+
+.h-9 {
+    height: 2.25rem;
 }
 
 .h-screen-12 {
@@ -77,8 +94,12 @@ html {
     height: 50%;
 }
 
-.h-2-5 {
-    height: 40%;
+.h-1-5 {
+    height: 20%;
+}
+
+.h-max-9r {
+    max-height: 9rem;
 }
 
 .w-fit {
@@ -115,4 +136,18 @@ html {
 
 .flex-2-5 {
     flex: 0 0 40%;
+}
+
+@media (min-width: 768px) {
+    .md\:h-9r {
+        height: 9rem;
+    }
+
+    .md\:w-53r {
+        width: 53rem;
+    }
+
+    .md\:h-2-5 {
+        height: 40%;
+    }
 }

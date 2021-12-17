@@ -1,6 +1,7 @@
 <script>
     export let headerText;
     export let image;
+    export let buttons;
 </script>
 
 <div class="flex flex-row h-screen-24 bg-secondary">
