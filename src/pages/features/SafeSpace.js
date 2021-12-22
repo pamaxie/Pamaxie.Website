@@ -3,7 +3,7 @@ import FeaturePage from '../../components/FeaturePage'
 
 import image from '../../assets/img/feature-3-image.png'
 
-export default function DataDetection() {
+export default function SafeSpace() {
     return (
         <FeaturePage
             headerText="Create a safe space to share experiences"

@@ -3,7 +3,7 @@ import FeaturePage from '../../components/FeaturePage'
 
 import image from '../../assets/img/feature-4-image.png'
 
-export default function DataDetection() {
+export default function Improvements() {
     return (
         <FeaturePage
             headerText="Great speed and reliability"

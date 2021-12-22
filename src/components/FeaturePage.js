@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 import logo from '../assets/img/pamaxie-text-logo.png'
 
@@ -17,7 +17,7 @@ export default class FeatureCard extends Component {
                     <h1 className="m-2-8 text-4xl text-gray-primary">{this.headerText}</h1>
                     <p className="m-2-8 text-2 text-gray-primary" dangerouslySetInnerHTML={{__html: this.innerHtml}}/>
                 </div>
-                <img src={this.image} alt="" className="flex-2-5 h-full object-cover overflow-hidden"/>
+                <img src={this.image} alt="" className="flex-2-5 h-full object-cover overflow-hidden bg-white"/>
             </div>
         )
     }

@@ -3,7 +3,7 @@ import FeaturePage from '../../components/FeaturePage'
 
 import image from '../../assets/img/feature-5-image.png'
 
-export default function DataDetection() {
+export default function Moderation() {
     return (
         <FeaturePage
             headerText="Improve Community moderation efficency"

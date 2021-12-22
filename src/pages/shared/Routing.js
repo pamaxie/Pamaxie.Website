@@ -9,6 +9,8 @@ import Improvements from "../features/Improvements";
 import Moderation from "../features/Moderation";
 import OpenSource from "../features/OpenSource";
 
+import Error404 from '../error/404'
+
 export default function Routing() {
     return(
         <Routes>
@@ -19,6 +21,7 @@ export default function Routing() {
             <Route exact path='/Improvements' element={<Improvements/>}/>
             <Route exact path='/Moderation' element={<Moderation/>}/>
             <Route exact path='/OpenSource' element={<OpenSource/>}/>
+            <Route exact path='*' element={<Error404/>}/>
         </Routes>
     );
 }

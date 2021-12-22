@@ -3,7 +3,7 @@ import FeaturePage from '../../components/FeaturePage'
 
 import image from '../../assets/img/feature-6-image.png'
 
-export default function DataDetection() {
+export default function OpenSource() {
     return (
         <FeaturePage
             headerText="Build to be open source"

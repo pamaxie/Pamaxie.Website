@@ -3,7 +3,7 @@ import FeaturePage from '../../components/FeaturePage'
 
 import image from '../../assets/img/feature-1-image.png'
 
-export default function DataDetection() {
+export default function DataPrivacy() {
     return (
         <FeaturePage
             headerText="Data privacy with Pamaxie"
