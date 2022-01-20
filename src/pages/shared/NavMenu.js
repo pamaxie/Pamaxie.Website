@@ -55,10 +55,10 @@ export default function NavMenu() {
                                   </div>
                               </div>
                           }/>
-                <div className="flex flex-row">
+                <Link to={{pathname: '/Identity'}} className="flex flex-row">
                     <img src={ProfilePictureTemplate} alt="" className="m-auto h-9"/>
                     <p className="m-auto ml-2 text-gray-primary text-xl">Leechy</p>
-                </div>
+                </Link>
                 <Link to={{pathname: '/'}}>
                     <img src={Logo} alt="" className="absolute m-auto top-0 bottom-0 left-0 right-0"/>
                 </Link>
