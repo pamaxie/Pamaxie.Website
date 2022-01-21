@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
-export default class FeatureCard extends Component {
+export class FeatureCard extends Component {
     constructor(params) {
         super(params);
         this.image = params.image;

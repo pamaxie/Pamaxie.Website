@@ -1,19 +1,17 @@
 import React, { useState } from 'react';
-import Dashboard from './Dashboard'
-import Login from "./Login";
+import {Login, Dashboard} from './';
 
-import useToken from '../../components/identity/UseToken';
+import useToken from '../../services/UseToken';
 
-export default function Home() {
-    const { token, setToken } = useToken();
-
-    if(!token) {
-        return <Login setToken={setToken} />
-    }
+export function Identity() {
+    //const { token, setToken } = useToken();
+    //if(!token) {
+    //    return <Login setToken={setToken} />
+    //}
 
     return (
         <div>
-            <Dashboard></Dashboard>
+            <Dashboard/>
         </div>
     )
 }

@@ -1,15 +1,10 @@
+import {Component} from "react";
 import {BrowserRouter as Router} from 'react-router-dom';
 import {ErrorBoundary} from 'react-error-boundary';
-import NavMenu from './pages/shared/NavMenu';
-import Footer from './pages/shared/Footer';
-import Routing from './pages/shared/Routing';
-
-import Error401 from './pages/error/404';
-import Error403 from './pages/error/404';
-import Error404 from './pages/error/404';
-import Error429 from './pages/error/429';
-import Error502 from './pages/error/404';
-import Error503 from './pages/error/404';
+import Routing from './Routing';
+import {History} from './helpers';
+import {Footer, NavMenu} from './components';
+import {Error401, Error403, Error404, Error429, Error502, Error503} from './pages/error';
 
 import './assets/fonts/OpenDyslexic-Regular.otf';
 import './assets/css/tailwind.min.css';
@@ -38,17 +33,23 @@ function renderErrorPage(error, errorInfo) {
     }
 }
 
-export default function App() {
-    return (
-        <ErrorBoundary
-            FallbackComponent={errorPage} //Not sure if this way works, else we will change away from using 'react-error-boundary' and make our own
-            onError={(error, errorInfo) => errorPage = renderErrorPage(error, errorInfo)}
-        >
-            <Router>
-                <NavMenu/>
-                <Routing/>
-                <Footer/>
-            </Router>
-        </ErrorBoundary>
-    );
+export default class App extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <ErrorBoundary
+                FallbackComponent={errorPage} //Not sure if this way works, else we will change away from using 'react-error-boundary' and make our own
+                onError={(error, errorInfo) => errorPage = renderErrorPage(error, errorInfo)}
+            >
+                <Router history={History}>
+                    <NavMenu/>
+                    <Routing/>
+                    <Footer/>
+                </Router>
+            </ErrorBoundary>
+        );
+    }
 }

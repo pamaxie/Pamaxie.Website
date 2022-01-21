@@ -1,10 +1,10 @@
 import React from 'react';
 
-import headerImage from "../../assets/img/bg-header.png"
-import headerLogo from "../../assets/img/pamaxie-text-logo.png"
-import fundingLogo from "../../assets/img/prototype-funding-image.png"
+import headerImage from "../../assets/img/bg-header.png";
+import headerLogo from "../../assets/img/pamaxie-text-logo.png";
+import fundingLogo from "../../assets/img/prototype-funding-image.png";
 
-export default function Header() {
+export function Header() {
     return (
         <div className="h-screen-12 flex flex-col">
             <div className="relative sm:h-2 md:h-2-5 h-1-2">

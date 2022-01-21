@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 
-import logo from '../assets/img/pamaxie-text-logo.png'
+import logo from '../assets/img/pamaxie-text-logo.png';
 
-export default class FeatureCard extends Component {
+export class ErrorPage extends Component {
     constructor(params) {
         super(params);
         this.image = params.image;

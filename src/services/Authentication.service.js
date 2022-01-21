@@ -1,9 +1,9 @@
 import {BehaviorSubject} from 'rxjs';
-import {handleResponse} from '../helpers/HandleResponse';
+import {HandleResponse} from '../helpers/';
 
 const currentUserSubject = new BehaviorSubject(JSON.parse(sessionStorage.getItem('currentUser')));
 
-export const authenticationService = {
+export const AuthenticationService = {
     login,
     logout,
     currentUser: currentUserSubject.asObservable(),
@@ -18,11 +18,10 @@ function login(credentials) {
     };
 
     return fetch(`http://localhost:8080/users/authenticate`, requestOptions)
-        .then(handleResponse)
+        .then(HandleResponse)
         .then(user => {
             sessionStorage.setItem('currentUser', JSON.stringify(user));
             currentUserSubject.next(user);
-
             return user;
         });
 }

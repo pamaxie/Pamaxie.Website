@@ -1,14 +1,14 @@
 import React from 'react';
-import FeatureCard from '../../components/FeatureCard'
+import {FeatureCard} from '../index';
 
-import featureImage_1 from '../../assets/img/feature-1-image.png'
-import featureImage_2 from '../../assets/img/feature-2-image.png'
-import featureImage_3 from '../../assets/img/feature-3-image.png'
-import featureImage_4 from '../../assets/img/feature-4-image.png'
-import featureImage_5 from '../../assets/img/feature-5-image.png'
-import featureImage_6 from '../../assets/img/feature-6-image.png'
+import featureImage_1 from '../../assets/img/feature-1-image.png';
+import featureImage_2 from '../../assets/img/feature-2-image.png';
+import featureImage_3 from '../../assets/img/feature-3-image.png';
+import featureImage_4 from '../../assets/img/feature-4-image.png';
+import featureImage_5 from '../../assets/img/feature-5-image.png';
+import featureImage_6 from '../../assets/img/feature-6-image.png';
 
-export default function Features() {
+export function Features() {
     return (
         <div className="flex flex-row flex-wrap m-9 bg-primary justify-evenly">
             <FeatureCard

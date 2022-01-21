@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function FootNote() {
+export function FootNote() {
     return (
         <div className="relative w-full bg-secondary" style={{height: '24rem'}}>
             <div className="flex flex-col absolute m-auto top-0 bottom-0 left-0 right-0 h-fit items-center"

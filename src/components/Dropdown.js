@@ -19,7 +19,7 @@ window.onclick = function(e) {
     }
 }
 
-export default class Dropdown extends Component {
+export class Dropdown extends Component {
     constructor(params) {
         super(params);
         this.idButton = params.id + "Button";

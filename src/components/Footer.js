@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Footer() {
+export function Footer() {
     return(
         <div className="flex flex-row relative h-12 bg-primary">
             <a className="m-auto-4 text-gray-primary" href="/">Privacy Policy</a>

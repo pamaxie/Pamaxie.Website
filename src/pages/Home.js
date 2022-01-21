@@ -1,9 +1,7 @@
 import React from 'react';
-import Header from './Header'
-import Features from './Features'
-import FootNote from './FootNote'
+import {Header, Features, FootNote} from '../components/home';
 
-export default function Home() {
+export function Home() {
     //throw new Error("Test");
     return (
         <div>

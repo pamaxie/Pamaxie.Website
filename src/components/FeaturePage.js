@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 
-import logo from '../assets/img/pamaxie-text-logo.png'
+import logo from '../assets/img/pamaxie-text-logo.png';
 
-export default class FeatureCard extends Component {
+export class FeaturePage extends Component {
     constructor(params) {
         super(params);
         this.image = params.image;
