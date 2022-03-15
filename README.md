@@ -7,3 +7,7 @@ This is the official website for pamaxie. We use it kind of like a managment int
 
 We are developing this as a open website which basically can be "looked behind" by everyone so they can see and maybe even get inspired by its source code (or help fix issues with it if they feel like it). The webiste consists of a few modules and is written mostly in React, HTML and CSS. It directly accesses our API.
 We do not recommend using this website for configuration related to Pamaxie, we will develop a smaller, more practical website that can serve as a managment interface for pamaxie to prevent people from having to host unnessecary components in the future (we will link it here once we have something to show)
+
+#### Possible thanks to:
+
+![**Federal Minstry Of Research and education**](https://i.imgur.com/riyuVGf.jpg) ![**Federal Minstry Of Research and education**](https://i.imgur.com/GI9XILN.png)
