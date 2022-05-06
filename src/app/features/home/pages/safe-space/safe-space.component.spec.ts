@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SafeSpaceComponent } from './safe-space.component';
+import {SafeSpaceComponent} from './safe-space.component';
 
 describe('SafeSpaceComponent', () => {
   let component: SafeSpaceComponent;
@@ -8,7 +8,7 @@ describe('SafeSpaceComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SafeSpaceComponent ]
+      declarations: [SafeSpaceComponent]
     })
       .compileComponents();
   });

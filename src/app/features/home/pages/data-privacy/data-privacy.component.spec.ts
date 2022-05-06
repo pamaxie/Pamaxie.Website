@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { DataPrivacyComponent } from './data-privacy.component';
+import {DataPrivacyComponent} from './data-privacy.component';
 
 describe('DataPrivacyComponent', () => {
   let component: DataPrivacyComponent;
@@ -8,7 +8,7 @@ describe('DataPrivacyComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DataPrivacyComponent ]
+      declarations: [DataPrivacyComponent]
     })
       .compileComponents();
   });

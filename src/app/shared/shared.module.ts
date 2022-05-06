@@ -4,8 +4,7 @@ import {FormsModule} from '@angular/forms';
 
 @NgModule({
   imports: [CommonModule, FormsModule],
-  declarations: [
-  ],
+  declarations: [],
   providers: [],
   exports: [
     CommonModule,

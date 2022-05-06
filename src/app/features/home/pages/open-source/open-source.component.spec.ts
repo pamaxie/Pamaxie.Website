@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { OpenSourceComponent } from './open-source.component';
+import {OpenSourceComponent} from './open-source.component';
 
 describe('OpenSourceComponent', () => {
   let component: OpenSourceComponent;
@@ -8,7 +8,7 @@ describe('OpenSourceComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OpenSourceComponent ]
+      declarations: [OpenSourceComponent]
     })
       .compileComponents();
   });

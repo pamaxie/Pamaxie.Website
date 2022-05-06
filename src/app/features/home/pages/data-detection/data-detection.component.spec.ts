@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { DataDetectionComponent } from './data-detection.component';
+import {DataDetectionComponent} from './data-detection.component';
 
 describe('DataDetectionComponent', () => {
   let component: DataDetectionComponent;
@@ -8,7 +8,7 @@ describe('DataDetectionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DataDetectionComponent ]
+      declarations: [DataDetectionComponent]
     })
       .compileComponents();
   });

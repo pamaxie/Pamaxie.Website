@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { FeaturePageComponent } from './feature-page.component';
+import {FeaturePageComponent} from './feature-page.component';
 
 describe('FeaturePageComponent', () => {
   let component: FeaturePageComponent;
@@ -8,7 +8,7 @@ describe('FeaturePageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FeaturePageComponent ]
+      declarations: [FeaturePageComponent]
     })
       .compileComponents();
   });
