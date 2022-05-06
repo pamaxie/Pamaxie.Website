@@ -10,4 +10,4 @@ We do not recommend using this website for configuration related to Pamaxie, we 
 
 #### Possible thanks to:
 
-![**Federal Minstry Of Research and education**](https://i.imgur.com/riyuVGf.jpg) ![**Federal Minstry Of Research and education**](https://i.imgur.com/GI9XILN.png)
+![**Federal Ministry Of Research and education**](https://i.imgur.com/riyuVGf.jpg) ![**Federal Ministry Of Research and education**](https://i.imgur.com/GI9XILN.png)
