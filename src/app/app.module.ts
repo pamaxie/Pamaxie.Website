@@ -1,11 +1,15 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
+import {UrlSerializer} from "@angular/router";
+
+import {LowerCaseUrlSerializer} from './core/utils/lower_case_url_serializer';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 
 import {HeaderComponent} from './core/components/header/header.component';
 import {FooterComponent} from './core/components/footer/footer.component';
+import {DropdownComponent} from './core/components/dropdown/dropdown.component';
 import {HomeModule} from "./features/home/home.module";
 import {ErrorModule} from "./features/error/error.module";
 import {AuthenticationModule} from "./features/authentication/authentication.module";
@@ -14,7 +18,8 @@ import {AuthenticationModule} from "./features/authentication/authentication.mod
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +28,12 @@ import {AuthenticationModule} from "./features/authentication/authentication.mod
     ErrorModule,
     AuthenticationModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: UrlSerializer,
+      useClass: LowerCaseUrlSerializer
+    }
+  ],
   exports: [],
   bootstrap: [AppComponent]
 })

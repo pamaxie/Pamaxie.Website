@@ -1,0 +1,10 @@
+<div class="relative inline-block">
+  <button [id]=idButton (click)="dropdown($event)"
+          class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-primary border-b border-gray-100 md:p-0 md:w-auto md:border-0 focus:outline-none">
+    <ng-content select="[buttonText]"></ng-content>
+  </button>
+  <div [id]=idContent
+       class="absolute w-40 bg-secondary rounded text-1 text-gray-primary list-none shadow z-50 hidden">
+    <ng-content select="[content]"></ng-content>
+  </div>
+</div>

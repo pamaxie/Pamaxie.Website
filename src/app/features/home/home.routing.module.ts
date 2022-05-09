@@ -12,12 +12,12 @@ import {OpenSourceComponent} from "./pages/open-source/open-source.component";
 const routes: Routes = [
   {
     path: '', children: [
-      {path: 'DataPrivacy', component: DataPrivacyComponent},
-      {path: 'DataDetection', component: DataDetectionComponent},
-      {path: 'SafeSpace', component: SafeSpaceComponent},
-      {path: 'Improvements', component: ImprovementsComponent},
-      {path: 'Moderation', component: ModerationComponent},
-      {path: 'OpenSource', component: OpenSourceComponent},
+      {path: 'data_privacy', component: DataPrivacyComponent},
+      {path: 'data_detection', component: DataDetectionComponent},
+      {path: 'safe_space', component: SafeSpaceComponent},
+      {path: 'improvements', component: ImprovementsComponent},
+      {path: 'moderation', component: ModerationComponent},
+      {path: 'open_source', component: OpenSourceComponent},
       {path: '', pathMatch: 'full', component: HomeComponent}
     ]
   }
