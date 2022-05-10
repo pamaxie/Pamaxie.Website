@@ -1,0 +1,62 @@
+<form [formGroup]="form">
+  <fieldset class="flex flex-col">
+    <legend class="my-8 text-5xl text-gray-primary font-bold text-center">Register</legend>
+    <div class="flex flex-row m-2-8">
+      <div class="flex flex-col form-field mr-2">
+        <label class="text-gray-primary text-2">First name</label>
+        <input name="firstname" formControlName="firstname"
+               class="block w-full px-3 py-1 text-2xl text-white bg-primary border border-solid border-secondary rounded transition ease-in-out m-0 focus:border-tertiary focus:outline-none">
+      </div>
+      <div class="flex flex-col form-field ml-2">
+        <label class="text-gray-primary text-2">Last name</label>
+        <input name="lastname" formControlName="lastname"
+               class="block w-full px-3 py-1 text-2xl text-white bg-primary border border-solid border-secondary rounded transition ease-in-out m-0 focus:border-tertiary focus:outline-none">
+      </div>
+    </div>
+    <div class="flex flex-col form-field m-2-8">
+      <label class="text-gray-primary text-2">Email address<p class="contents text-red-500">*</p></label>
+      <input name="email" formControlName="email"
+             class="block w-full px-3 py-1 text-2xl text-white bg-primary border border-solid border-secondary rounded transition ease-in-out m-0 focus:border-tertiary focus:outline-none">
+    </div>
+    <div class="flex flex-col form-field m-2-8">
+      <label class="text-gray-primary text-2">Password<p class="contents text-red-500">*</p></label>
+      <input name="password" formControlName="password" type="password"
+             class="block w-full px-3 py-1 text-2xl text-white bg-primary border border-solid border-secondary rounded transition ease-in-out m-0 focus:border-tertiary focus:outline-none">
+    </div>
+    <div class="flex flex-col form-field m-2-8">
+      <label class="text-gray-primary text-2">Confirm password<p class="contents text-red-500">*</p></label>
+      <input name="password" formControlName="password" type="password"
+             class="block w-full px-3 py-1 text-2xl text-white bg-primary border border-solid border-secondary rounded transition ease-in-out m-0 focus:border-tertiary focus:outline-none">
+    </div>
+    <div class="flex flex-row form-field m-2-8 items-center">
+      <input id="tos" name="" formControlName="" type="checkbox"
+             class="appearance-none h-5 w-5 mr-2 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 align-top float-left cursor-pointer">
+      <label for="tos" class="text-gray-primary text-1">
+        I have read and agree to the
+        <a routerLink="tos" routerLinkActive="active"
+           class="text-blue-500 font-bold cursor-pointer hover:text-blue-400 transition duration-200 ease-in-out">Terms
+          of Service</a><p class="contents text-red-500">*</p>
+      </label>
+    </div>
+    <div class="flex flex-row form-field m-2-8 items-center">
+      <input id="privacy" name="" formControlName="" type="checkbox"
+             class="appearance-none h-5 w-5 mr-2 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 align-top float-left cursor-pointer">
+      <label for="privacy" class="text-gray-primary text-1">
+        I have read and agree to the
+        <a routerLink="privacy" routerLinkActive="active"
+           class="text-blue-500 font-bold cursor-pointer hover:text-blue-400 transition duration-200 ease-in-out">Privacy
+          Policy</a><p class="contents text-red-500">*</p>
+      </label>
+    </div>
+  </fieldset>
+  <div class="m-4">
+    <button class="block px-4 py-2 m-auto w-64 bg-tertiary rounded-xl text-gray-primary hover:bg-primary"
+            (click)="register()">
+      REGISTER
+    </button>
+  </div>
+  <p class="text-gray-primary text-center">
+    Already have a account? <a routerLink="/login" routerLinkActive="active"
+                               class="text-right text-blue-500 text-1 hover:text-blue-400 transition duration-200 ease-in-out">Login</a>
+  </p>
+</form>

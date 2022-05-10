@@ -5,11 +5,13 @@ import {AuthenticationRoutingModule} from "./authentication.routing.module";
 import {AuthenticationComponent} from "./authentication.component";
 import {LoginComponent} from "./pages/login/login.component";
 import {ReactiveFormsModule} from "@angular/forms";
+import {RegisterComponent} from "./pages/register/register.component";
 
 @NgModule({
   declarations: [
     AuthenticationComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     AuthenticationRoutingModule,

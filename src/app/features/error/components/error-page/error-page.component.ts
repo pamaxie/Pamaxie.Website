@@ -6,7 +6,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./error-page.component.scss']
 })
 export class ErrorPageComponent implements OnInit {
-  logo: any = 'app/assets/images/pamaxie-text-logo.png';
+  logo: string = 'app/assets/images/pamaxie-text-logo.png';
   @Input() image: string = '';
   @Input() headerText: string = '';
   @Input() bodyText: string = '';

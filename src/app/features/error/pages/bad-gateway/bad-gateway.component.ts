@@ -10,8 +10,8 @@ export class BadGatewayComponent implements OnInit {
   headerText: string = '502 - BAD GATEWAY'
   bodyText: string = 'Some of our backends seems to have an issue and can’t tell us some of the information, you’re looking for right now. Please check the service status if this issue is known, if not feel free to reach out to us.';
   buttonInfo: { text: string; path: string; }[] = [
-    {'text': 'Contact Support', 'path': '/'},
-    {'text': 'Service Status', 'path': '/'}
+    {'text': 'Contact Support', 'path': '/support'},
+    {'text': 'Service Status', 'path': '/status'}
   ];
 
   constructor() {

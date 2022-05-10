@@ -24,6 +24,10 @@ html {
   background-color: #1F1F1F;
 }
 
+input:checked[type=checkbox] {
+  background-image: url('src/app/assets/images/checked.svg');
+}
+
 .bg-primary,
 .hover\:bg-primary:hover {
   background: #484764;
@@ -39,16 +43,31 @@ html {
   background: #2D2C3E;
 }
 
-.border-primary {
+.border-primary,
+.focus\:border-primary:focus {
   border-color: #484764;
 }
 
-.border-secondary {
+.border-secondary,
+.focus\:border-secondary:focus {
   border-color: #3A3950;
 }
 
-.border-tertiary {
+.border-tertiary,
+.focus\:border-tertiary:focus {
   border-color: #2D2C3E;
+}
+
+.checked\:bg-blue-600:checked {
+  --bg-opacity: 1;
+  background-color: #3182ce;
+  background-color: rgba(49,130,206,var(--bg-opacity));
+}
+
+.checked\:border-blue-600:checked {
+  --border-opacity: 1;
+  border-color: #3182ce;
+  border-color: rgba(49,130,206,var(--border-opacity));
 }
 
 .text-gray-primary {

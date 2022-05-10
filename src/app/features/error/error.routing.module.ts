@@ -18,7 +18,7 @@ const routes: Routes = [
       {path: '429', component: TooManyRequestsComponent},
       {path: '502', component: BadGatewayComponent},
       {path: '503', component: ServiceUnavailableComponent},
-      {path: '**', pathMatch: 'full', redirectTo: '404'}
+      {path: '**', pathMatch: 'full', component: NotFoundComponent}
     ]
   }
 ];
