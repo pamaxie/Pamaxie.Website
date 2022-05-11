@@ -1,27 +1,39 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {environment} from "src/environments/environment";
-import {User} from "src/app/core/models";
+import {Router} from "@angular/router";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  constructor(/*private http: HttpClient*/) {
+  constructor(private router: Router) {
   }
 
+  //TODO This is not the correct way of managing authentication, but it lets me go around and test stuff before it gets implemented.
   login(email: string, password: string) {
-    //return this.http.post<User>(environment.api_endpoint + 'user/login', {email, password});
+    localStorage.setItem('token', 'secretTestToken');
+    // noinspection JSIgnoredPromiseFromCall
+    this.router.navigate(['/']);
   }
 
   logout() {
+    localStorage.removeItem('token');
+    // noinspection JSIgnoredPromiseFromCall
+    this.router.navigate(['/']);
   }
 
   public isLoggedIn(): boolean {
-    return false;
+    let hasToken = false;
+    if (localStorage.getItem('token') == 'secretTestToken'){
+      hasToken = true;
+    }
+    return hasToken;
   }
 
   isLoggedOut(): boolean {
-    return false;
+    return !this.isLoggedIn();
+  }
+
+  getToken(){
+    return localStorage.getItem('token');
   }
 }

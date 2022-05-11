@@ -1,4 +1,4 @@
-import { DefaultUrlSerializer, UrlTree } from '@angular/router';
+import {DefaultUrlSerializer, UrlTree} from '@angular/router';
 
 export class LowerCaseUrlSerializer extends DefaultUrlSerializer {
   override parse(url: string): UrlTree {

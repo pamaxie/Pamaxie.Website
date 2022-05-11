@@ -42,7 +42,7 @@
           <ng-container *ngIf="authService.isLoggedIn();then loggedIn else notLoggedIn"></ng-container>
           <ng-template #loggedIn>
             <a routerLink="/account/manage" routerLinkActive="active" class="block px-4 py-2 cursor-pointer hover:bg-primary">Manage Account</a>
-            <a routerLink="/logout" routerLinkActive="active" class="block px-4 py-2 cursor-pointer hover:bg-primary">Sign out</a>
+            <a (click)="authService.logout()" class="block px-4 py-2 cursor-pointer hover:bg-primary">Sign out</a>
           </ng-template>
           <ng-template #notLoggedIn>
             <a routerLink="/login" routerLinkActive="active" class="block px-4 py-2 cursor-pointer hover:bg-primary">Sign in</a>

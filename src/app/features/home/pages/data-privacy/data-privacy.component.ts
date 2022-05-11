@@ -6,7 +6,7 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./data-privacy.component.scss']
 })
 export class DataPrivacyComponent implements OnInit {
-  image: string = 'app/assets/images/feature-1-image.png';
+  image: string = 'app/assets/images/feature-data-privacy-image.png';
   headerText: string = 'Data privacy with Pamaxie';
   innerHtml: string[] = [
     'Data privacy is one of the biggest concerns when we develop Pamaxie. The basic idea is that all data is stored in a private manner, including passwords, emails and other things. We will NEVER send out advertisements to anyone. We encrypt all user data to ensure that its kept private. Data is handled in the following manner:',

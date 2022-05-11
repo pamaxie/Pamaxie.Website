@@ -70,6 +70,18 @@ input:checked[type=checkbox] {
   border-color: rgba(49,130,206,var(--border-opacity));
 }
 
+.checked\:bg-green-400:checked {
+  --bg-opacity: 1;
+  background-color: #68d391;
+  background-color: rgba(104,211,145,var(--bg-opacity));
+}
+
+.checked\:border-green-400:checked {
+  --border-opacity: 1;
+  border-color: #68d391;
+  border-color: rgba(104,211,145,var(--border-opacity));
+}
+
 .text-gray-primary {
   color: #E1E1E1;
 }

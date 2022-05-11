@@ -6,7 +6,7 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./service-unavailable.component.scss']
 })
 export class ServiceUnavailableComponent implements OnInit {
-  image: string = 'app/assets/images/error-503-image.png';
+  image: string = 'app/assets/images/error-503-service-unavailable-image.png';
   headerText: string = '503 - SERVICE UNAVAILABLE'
   bodyText: string = 'There seems to be an issue with our servers, please check the service status if we already noticed this error. If not feel free to reach out to us to inform us about this issue. Please remember that the service status maybe delayed by up to 10 minutes.';
   buttonInfo: { text: string; path: string; }[] = [
