@@ -13,13 +13,15 @@ import {DropdownComponent} from './core/components/dropdown/dropdown.component';
 import {HomeModule} from "./features/home/home.module";
 import {ErrorModule} from "./features/error/error.module";
 import {AuthenticationModule} from "./features/authentication/authentication.module";
+import { SidebarMenuComponent } from './core/components/sidebar-menu/sidebar-menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    DropdownComponent
+    DropdownComponent,
+    SidebarMenuComponent
   ],
   imports: [
     BrowserModule,
