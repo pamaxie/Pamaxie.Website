@@ -1,0 +1,97 @@
+/*!
+ footer.component.scss
+ Pamaxie - https://Pamaxie.com/
+ Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
+
+ Copyright © Pamaxie™ 2021 all rights reserved
+ */
+
+/* ============================================[ footer.component.scss ]============================================= *
+ *   This document contains all styling for footer.component                                                          *
+ *                                                                                                                    *
+ *   Table of Content                                                                                                 *
+ *   - General Component Style                                                                                        *
+ *   - Footer                                                                                                         *
+ * ================================================================================================================== */
+
+/* ===========================================[ GENERAL COMPONENT STYLE ]============================================ *
+ *   Contains the imports and variables for the footer component                                                      *
+ * ================================================================================================================== */
+
+@import "src/app/styles/variables";
+
+/* ====================================  End of GENERAL COMPONENT STYLE Section  ==================================== */
+
+
+/* ====================================================[ FOOTER ]==================================================== *
+ *   Contains all styling for the footer component                                                                    *
+ * ================================================================================================================== */
+
+#footer {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr auto;
+  justify-items: center;
+  padding: 40px;
+  height: 18rem;
+  background-color: $Shade_1;
+}
+
+#footer > p {
+  width: 500px;
+  margin: auto 0;
+  font-size: 45px;
+  text-align: center;
+  color: #E64D67;
+}
+
+#footer > div:first-of-type {
+  display: grid;
+  grid-template: auto auto / 1fr;
+  margin: auto;
+  height: fit-content;
+  width: fit-content;
+}
+
+#footer > div:first-of-type > p {
+  grid-area: 1 / 1 / 1 / 3;
+  font-size: 16px;
+}
+
+#footer > div:first-of-type > div {
+  display: grid;
+  grid-template: auto / 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+#footer > div:last-of-type {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr 1fr 1fr;
+}
+
+#footer > div:last-of-type > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 20px
+}
+
+#footer > div:last-of-type p {
+  font-size: 16px;
+}
+
+#footer > div:last-of-type > div > div {
+  margin: 4px 0;
+  height: 2px;
+  width: 100%;
+  border-radius: 4px;
+  background-color: $Shade_3;
+}
+
+#footer > div:last-of-type a {
+  margin: 2px 20px;
+  font-size: 16px;
+  color: $Color_Light;
+}
+
+/* =============================================  End of FOOTER Section  ============================================ */

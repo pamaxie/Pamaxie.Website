@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+/*!
+ styles.scss
+ Pamaxie - https://Pamaxie.com/
+ Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
+
+ Copyright © Pamaxie™ 2021 all rights reserved
+ */
+
+/* =================================================[ styles.scss ]================================================== *
+ *   This document contains all imports and styling from external sources                                             *
+ *   You can add global styles to this file, and also import other style files                                        *
+ * ================================================================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('~src/app/assets/fonts/OpenDyslexic-Regular.otf');
+  font-style: normal;
+  font-weight: normal;
+}

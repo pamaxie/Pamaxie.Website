@@ -1,0 +1,103 @@
+/*!
+ privacy.component.scss
+ Pamaxie - https://Pamaxie.com/
+ Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
+
+ Copyright © Pamaxie™ 2021 all rights reserved
+ */
+
+/* ============================================[ privacy.component.scss ]============================================ *
+ *   This document contains all styling for privacy.component                                                         *
+ *                                                                                                                    *
+ *   Table of Content                                                                                                 *
+ *   - General Page Style                                                                                             *
+ *   - Header                                                                                                         *
+ *   - Content                                                                                                        *
+ * ================================================================================================================== */
+
+/* ==============================================[ GENERAL PAGE STYLE ]============================================== *
+ *   Contains the imports and variables for the privacy policy page                                                   *
+ * ================================================================================================================== */
+
+@import "src/app/styles/variables";
+
+/* =======================================  End of GENERAL PAGE STYLE Section  ====================================== */
+
+
+/* ====================================================[ HEADER ]==================================================== *
+ *   Contains all styling for the header section of the privacy policy page                                           *
+ * ================================================================================================================== */
+
+#header {
+  height: calc(100vh - 4rem);
+}
+
+#header img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(60%) grayscale(50%);
+}
+
+#header > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: fit-content;
+}
+
+#header h1 {
+  margin: 15px;
+  width: 1200px;
+  font-size: 60px;
+  text-align: center;
+  color: $Color_Light;
+}
+
+#header p {
+  margin: 15px;
+  width: 840px;
+  font-size: 25px;
+  text-align: center;
+  color: $Color_Light;
+}
+
+/* =============================================  End of HEADER Section  ============================================ */
+
+
+/* ===================================================[ CONTENT ]==================================================== *
+ *   Contains all styling for the content section of the privacy policy page                                          *
+ * ================================================================================================================== */
+
+#content {
+  background-color: $Shade_3;
+}
+
+#content > div:first-of-type {
+  position: absolute;
+  padding: 10px;
+  font-size: 25px;
+}
+
+#content > div:last-of-type {
+  display: grid;
+  grid-gap: 60px;
+  padding: 80px 125px;
+}
+
+#content > div:last-of-type h1 {
+  font-size: 50px;
+}
+
+#content > div:last-of-type p {
+  font-size: 22px;
+}
+
+/* ============================================  End of CONTENT Section  ============================================ */

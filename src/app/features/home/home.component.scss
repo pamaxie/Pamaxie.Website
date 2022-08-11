@@ -1,0 +1,152 @@
+/*!
+ home.component.scss
+ Pamaxie - https://Pamaxie.com/
+ Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
+
+ Copyright © Pamaxie™ 2021 all rights reserved
+ */
+
+/* =============================================[ home.component.scss ]============================================== *
+ *   This document contains all styling for home.component                                                            *
+ *                                                                                                                    *
+ *   Table of Content                                                                                                 *
+ *   - General Page Style                                                                                             *
+ *   - Header                                                                                                         *
+ *   - Information                                                                                                    *
+ * ================================================================================================================== */
+
+/* ==============================================[ GENERAL PAGE STYLE ]============================================== *
+ *   Contains the imports and variables for the home page                                                             *
+ * ================================================================================================================== */
+
+@import "src/app/styles/variables";
+@import "src/app/styles/functions";
+
+/* =======================================  End of GENERAL PAGE STYLE Section  ====================================== */
+
+
+/* ====================================================[ HEADER ]==================================================== *
+ *   Contains all styling for the header section of the home page                                                     *
+ * ================================================================================================================== */
+
+#header {
+  height: calc(100vh - 4rem);
+}
+
+#header img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(60%) grayscale(50%);
+}
+
+#header > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: fit-content;
+}
+
+#header h1 {
+  margin: 15px;
+  width: 1200px;
+  font-size: 60px;
+  text-align: center;
+  color: $Color_Primary_2;
+}
+
+#header p {
+  margin: 15px;
+  width: 840px;
+  font-size: 25px;
+  text-align: center;
+  color: $Color_Light;
+}
+
+#header a {
+  @include button_hover($Color_Primary_1);
+  @include button_active($Color_Primary_1);
+  margin: 15px;
+  padding: 10px 28px;
+  background-color: $Color_Primary_1;
+  border-radius: 2px;
+  font-size: 14px;
+  text-align: center;
+  color: $Color_Light;
+}
+
+/* =============================================  End of HEADER Section  ============================================ */
+
+
+/* =================================================[ INFORMATION ]================================================== *
+ *   Contains all styling for the information section of the home page                                                *
+ * ================================================================================================================== */
+
+@mixin positioning {
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i}) {
+      grid-row-start: 0+$i;
+      grid-row-end: 2+$i;
+      @if $i % 2 != 0 {
+        grid-column: 1;
+      } @else {
+        grid-column: 2;
+      }
+    }
+  }
+}
+
+#information {
+  display: grid;
+  padding: 0 100px;
+  background-color: $Shade_2;
+}
+
+#information > div {
+  @include positioning;
+  display: grid;
+  width: 100%;
+  margin: 80px 20px;
+  color: $Color_Light;
+  text-align: center;
+}
+
+#information > div > p:first-of-type {
+  margin: 10px;
+  font-size: 40px;
+}
+
+#information > div > p:first-of-type > span:first-of-type {
+  color: $Color_Primary_1;
+}
+
+#information > div > p:first-of-type > span:last-of-type {
+  color: $Color_Primary_2;
+}
+
+#information > div > p:last-of-type {
+  font-size: 25px;
+}
+
+#information a {
+  @include button_hover($Color_Primary_1);
+  @include button_active($Color_Primary_1);
+  left: 0;
+  right: 0;
+  margin: 15px auto;
+  padding: 8px 26px;
+  background-color: $Color_Primary_1;
+  border-radius: 2px;
+  font-size: 14px;
+  text-align: center;
+  color: $Color_Light;
+}
+
+/* ==========================================  End of INFORMATION Section  ========================================== */

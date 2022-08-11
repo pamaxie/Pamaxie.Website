@@ -1,4 +1,12 @@
-export enum User_flags {
+/*!
+ user-flags.ts
+ Pamaxie - https://Pamaxie.com/
+ Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
+
+ Copyright © Pamaxie™ 2021 all rights reserved
+ */
+
+export enum UserFlags {
   /**
    * No user flags are set
    */

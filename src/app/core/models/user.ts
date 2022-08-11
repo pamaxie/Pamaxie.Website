@@ -1,5 +1,13 @@
+/*!
+ user.ts
+ Pamaxie - https://Pamaxie.com/
+ Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
+
+ Copyright © Pamaxie™ 2021 all rights reserved
+ */
+
 import {Project} from "./project";
-import {User_flags} from "../enums";
+import {UserFlags} from "../enums";
 
 export interface User {
   Id: string;
@@ -10,7 +18,7 @@ export interface User {
   PasswordHash: string;
   KnownIps: string[];
   Projects: {Item1: Project, Item2: string}[];
-  Flags: User_flags;
+  Flags: UserFlags;
   CreationDate: Date;
   TTL: Date;
 }

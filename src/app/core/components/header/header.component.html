@@ -1,14 +1,22 @@
-<div class="h-12">
-  <div class="fixed flex flex-row h-inherit w-full bg-tertiary z-30"
-       style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06), 0 4px 6px rgba(0, 0, 0, 0.1)">
-    <app-sidebar-menu></app-sidebar-menu>
-    <a routerLink="/" routerLinkActive="active">
-      <img src="app/assets/images/logo.png" alt="" class="absolute m-auto top-0 bottom-0 left-0 right-0"/>
-    </a>
-    <div class="flex items-center absolute m-auto top-0 bottom-0 right-0" style="margin-right: 1rem">
-    <a (click)="toggleOpenDyslexic()" class="openDyslexic text-center text-gray-primary text-3xl cursor-pointer">
-      O
-    </a>
+<!--
+header.component.html
+Pamaxie - https://Pamaxie.com/
+Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
+
+Copyright © Pamaxie™ 2021 all rights reserved
+-->
+
+<div id="header" class="h-12">
+  <a href="/"><app-pamaxie-w-name></app-pamaxie-w-name></a>
+  <div>
+    <a routerLink="" routerLinkActive="active">Dashboard</a>
+    <a routerLink="" routerLinkActive="active">Downloads</a>
+    <a routerLink="resources/support" routerLinkActive="active">Support</a>
+    <a routerLink="company/blog" routerLinkActive="active">Blog</a>
+    <a routerLink="" routerLinkActive="active">Security</a>
+    <a routerLink="" routerLinkActive="active">Donate</a>
   </div>
+  <div>
+    <a class="openDyslexic" (click)="toggleOpenDyslexic()">O</a>
   </div>
 </div>

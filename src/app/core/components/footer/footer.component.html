@@ -1,6 +1,52 @@
-<div class="flex flex-row relative h-12 bg-primary">
-  <a routerLink="/policy" routerLinkActive="active" class="m-auto-4 text-gray-primary">Privacy Policy</a>
-  <a routerLink="/tos" routerLinkActive="active" class="m-auto-4 text-gray-primary">Terms of Service</a>
-  <a routerLink="/support" routerLinkActive="active" class="m-auto-4 text-gray-primary">Support</a>
-  <p class="m-auto-4-auto-auto right-0 text-gray-primary">© Pamaxie™ 2021 all rights reserved</p>
+<!--
+footer.component.html
+Pamaxie - https://Pamaxie.com/
+Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
+
+Copyright © Pamaxie™ 2021 all rights reserved
+-->
+
+<div id="footer">
+  <p>Content detection at your fingertips...</p>
+  <div>
+    <p>Funded By</p>
+    <div>
+      <app-bmbf></app-bmbf>
+      <app-prototype-fund></app-prototype-fund>
+    </div>
+  </div>
+  <div>
+    <div>
+      <p>Resources</p>
+      <div></div>
+      <a routerLink="resources/forum" routerLinkActive="active">Forum</a>
+      <a routerLink="resources/discord" routerLinkActive="active">Discord</a>
+      <a routerLink="resources/feedback" routerLinkActive="active">Feedback</a>
+      <a routerLink="resources/support" routerLinkActive="active">Support</a>
+    </div>
+    <div>
+      <p>Company</p>
+      <div></div>
+      <a routerLink="company/about" routerLinkActive="active">About</a>
+      <a routerLink="company/blog" routerLinkActive="active">Blog</a>
+    </div>
+    <div>
+      <p>Product</p>
+      <div></div>
+      <a routerLink="product/access" routerLinkActive="active">Request Access</a>
+      <a routerLink="product/login" routerLinkActive="active">Login</a>
+      <a routerLink="product/status" routerLinkActive="active">Status</a>
+      <a routerLink="product/conduct" routerLinkActive="active">Code of Conduct</a>
+      <a routerLink="product/github">Github</a>
+      <a routerLink="product/contribution">Contribution</a>
+    </div>
+    <div>
+      <p>Policies</p>
+      <div></div>
+      <a routerLink="policies/privacy" routerLinkActive="active">Privacy</a>
+      <a routerLink="policies/tos" routerLinkActive="active">Terms of Service</a>
+      <a routerLink="policies/third" routerLinkActive="active">3rd Party Licenses</a>
+      <a routerLink="policies/license" routerLinkActive="active">License</a>
+    </div>
+  </div>
 </div>

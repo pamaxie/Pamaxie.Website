@@ -1,3 +1,11 @@
+/*!
+ project-permissions.ts
+ Pamaxie - https://Pamaxie.com/
+ Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
+
+ Copyright © Pamaxie™ 2021 all rights reserved
+ */
+
 export enum ProjectPermissions {
   /**
    * No Permissions for this user (User is not part for this project or no permissions have been granted to them)

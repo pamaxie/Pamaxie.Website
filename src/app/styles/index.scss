@@ -1,20 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
-
-@font-face {
-  font-family: 'OpenDyslexic';
-  src: url('src/app/assets/fonts/OpenDyslexic-Regular.otf');
-  font-style: normal;
-  font-weight: normal;
-}
-
-html {
-  font-family: Quicksand, serif;
-}
-
-.openDyslexic {
-  font-family: OpenDyslexic, serif !important;
-}
-
 ::-webkit-scrollbar {
   background-color: #403F3F;
   width: 15px;
@@ -25,7 +8,7 @@ html {
 }
 
 input:checked[type=checkbox] {
-  background-image: url('src/app/assets/images/checked.svg');
+  //background-image: url('~/assets/images/checked.svg');
 }
 
 .bg-primary,

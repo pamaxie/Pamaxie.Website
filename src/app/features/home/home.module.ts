@@ -1,9 +1,16 @@
+/*!
+ home.module.ts
+ Pamaxie - https://Pamaxie.com/
+ Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
+
+ Copyright © Pamaxie™ 2021 all rights reserved
+ */
+
 import {NgModule} from '@angular/core';
 import {CommonModule} from "@angular/common";
 
 import {HomeRoutingModule} from './home.routing.module';
 import {HomeComponent} from "./home.component";
-import {HeaderComponent} from "./components/header/header.component";
 import {FootnoteComponent} from "./components/footnote/footnote.component";
 import {FeaturesComponent} from "./components/features/features.component";
 import {FeatureCardComponent} from "./components/feature-card/feature-card.component";
@@ -18,7 +25,6 @@ import {OpenSourceComponent} from "./pages/open-source/open-source.component";
 @NgModule({
   declarations: [
     HomeComponent,
-    HeaderComponent,
     FeaturesComponent,
     FootnoteComponent,
     FeatureCardComponent,

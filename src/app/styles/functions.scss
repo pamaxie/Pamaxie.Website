@@ -1,0 +1,41 @@
+/*!
+ functions.scss
+ Pamaxie - https://Pamaxie.com/
+ Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
+
+ Copyright © Pamaxie™ 2021 all rights reserved
+ */
+
+/* ================================================[ functions.scss ]================================================ *
+ *   This document contains all styling functions                                                                     *
+ * ================================================================================================================== */
+
+@import "variables";
+
+//Button :hover
+@mixin button_hover($background_color) {
+  &:hover {
+    background-color: lighten($background_color, $button_hover_brightness);
+  }
+}
+
+//Button :active
+@mixin button_active($background_color) {
+  &:active {
+    background-color: lighten($background_color, $button_active_brightness);
+  }
+}
+
+//Link :hover
+@mixin link_hover($color) {
+  &:hover {
+    color: lighten($color, $link_hover_brightness);
+  }
+}
+
+//Link :active
+@mixin link_active($color) {
+  &:active {
+    color: lighten($color, $link_active_brightness);
+  }
+}
