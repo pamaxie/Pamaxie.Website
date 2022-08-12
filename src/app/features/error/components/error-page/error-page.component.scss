@@ -1,0 +1,72 @@
+@import "src/app/styles/colors";
+@import "src/app/styles/functions";
+
+#error {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 4rem - 18rem);
+  background-color: $Shade_3;
+}
+
+#error > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem;
+}
+
+#error > div > img {
+  height: 8rem;
+  object-fit: contain;
+}
+
+#error > div > h1 {
+  margin: 0 10px;
+  font-size: 30px;
+}
+
+#error > div > p {
+  font-size: 22px;
+  text-align: center;
+  max-width: 830px;
+}
+
+#error > div > a {
+  @include button_hover($Color_Primary_1);
+  @include button_active($Color_Primary_1);
+  display: block;
+  margin: 10px;
+  padding: 8px 26px;
+  width: 200px;
+  border-radius: 4px;
+  background-color: $Color_Primary_1;
+  color: $Color_Light;
+  text-align: center;
+}
+
+#error > img {
+  flex: 0 1 40%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  background-color: $Shade_2;
+}
+
+
+//<div class="flex flex-row h-screen-24 bg-secondary">
+//<div class="flex flex-col flex-1 justify-center items-center m-8">
+//<img [src]="logo" alt="" class="h-32 object-contain"/>
+//<h1 class="m-2-8 text-4xl text-gray-primary font-bold">{{headerText}}</h1>
+//<p class="m-2-8 text-2 text-gray-primary text-center" style="max-width: 830px">
+//                                                                              {{bodyText}}
+//</p>
+//<a *ngFor="let info of buttonInfo"
+//class="block px-4 py-2 bg-tertiary rounded-full text-gray-primary hover:bg-primary" style="margin: 3px"
+//[routerLink]="info.path">
+//                        {{info.text}}
+//</a>
+//</div>
+//<img [src]="image" alt="" class="flex-2-5 h-full object-cover overflow-hidden bg-tertiary"/>
+//</div>

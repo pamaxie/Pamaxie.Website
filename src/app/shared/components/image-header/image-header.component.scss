@@ -1,0 +1,74 @@
+/*!
+ image-header.component.scss
+ Pamaxie - https://Pamaxie.com/
+ Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
+
+ Copyright © Pamaxie™ 2021 all rights reserved
+ */
+
+/* =========================================[ image-header.component.scss ]========================================== *
+ *   This document contains all styling for image-header.component                                                    *
+ *                                                                                                                    *
+ *   Table of Content                                                                                                 *
+ *   - General Component Style                                                                                        *
+ *   - Header                                                                                                         *
+ * ================================================================================================================== */
+
+/* ===========================================[ GENERAL COMPONENT STYLE ]============================================ *
+ *   Contains the imports and variables for the image header component                                                *
+ * ================================================================================================================== */
+
+@import "src/app/styles/colors";
+
+/* ====================================  End of GENERAL COMPONENT STYLE Section  ==================================== */
+
+
+/* ====================================================[ HEADER ]==================================================== *
+ *   Contains all styling for the header section of the image header component                                        *
+ * ================================================================================================================== */
+
+#header {
+  height: calc(100vh - 4rem);
+  background-color: $Shade_2;
+}
+
+#header img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(60%) grayscale(50%);
+}
+
+#header > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: fit-content;
+}
+
+#header h1 {
+  margin: 15px;
+  width: 1200px;
+  font-size: 60px;
+  text-align: center;
+  color: $Color_Light;
+  white-space: pre-line;
+}
+
+#header h2 {
+  margin: 15px;
+  width: 840px;
+  font-size: 25px;
+  text-align: center;
+  color: $Color_Light;
+  white-space: pre-line;
+}
+
+/* =============================================  End of HEADER Section  ============================================ */

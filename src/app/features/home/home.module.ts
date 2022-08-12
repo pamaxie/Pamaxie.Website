@@ -1,4 +1,4 @@
-/*!
+/*
  home.module.ts
  Pamaxie - https://Pamaxie.com/
  Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
@@ -6,39 +6,33 @@
  Copyright © Pamaxie™ 2021 all rights reserved
  */
 
+//CORE IMPORTS
 import {NgModule} from '@angular/core';
 import {CommonModule} from "@angular/common";
+import {SharedModule} from "../../shared/shared.module";
 
-import {HomeRoutingModule} from './home.routing.module';
+//HOME IMPORTS
 import {HomeComponent} from "./home.component";
-import {FootnoteComponent} from "./components/footnote/footnote.component";
-import {FeaturesComponent} from "./components/features/features.component";
-import {FeatureCardComponent} from "./components/feature-card/feature-card.component";
+import {HomeRoutingModule} from './home.routing.module';
+
+//CHILD COMPONENT IMPORTS
 import {DataDetectionComponent} from "./pages/data-detection/data-detection.component";
-import {FeaturePageComponent} from "./components/feature-page/feature-page.component";
-import {DataPrivacyComponent} from "./pages/data-privacy/data-privacy.component";
-import {SafeSpaceComponent} from "./pages/safe-space/safe-space.component";
-import {ImprovementsComponent} from "./pages/improvements/improvements.component";
-import {ModerationComponent} from "./pages/moderation/moderation.component";
+import {PricingComponent} from "./pages/pricing/pricing.component";
 import {OpenSourceComponent} from "./pages/open-source/open-source.component";
+import {DataPrivacyComponent} from "./pages/data-privacy/data-privacy.component";
 
 @NgModule({
   declarations: [
     HomeComponent,
-    FeaturesComponent,
-    FootnoteComponent,
-    FeatureCardComponent,
-    FeaturePageComponent,
-    DataPrivacyComponent,
     DataDetectionComponent,
-    SafeSpaceComponent,
-    ImprovementsComponent,
-    ModerationComponent,
-    OpenSourceComponent
+    PricingComponent,
+    OpenSourceComponent,
+    DataPrivacyComponent
   ],
   imports: [
     HomeRoutingModule,
-    CommonModule
+    CommonModule,
+    SharedModule
   ],
   exports: [],
   providers: [],

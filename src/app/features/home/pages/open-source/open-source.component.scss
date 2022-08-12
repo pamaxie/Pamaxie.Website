@@ -1,0 +1,45 @@
+/*!
+ open-source.component.scss
+ Pamaxie - https://Pamaxie.com/
+ Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
+
+ Copyright © Pamaxie™ 2021 all rights reserved
+ */
+
+/* ==========================================[ open-source.component.scss ]========================================== *
+ *   This document contains all styling for open-source.component                                                     *
+ *                                                                                                                    *
+ *   Table of Content                                                                                                 *
+ *   - General Page Style                                                                                             *
+ *   - Content                                                                                                        *
+ * ================================================================================================================== */
+
+/* ==============================================[ GENERAL PAGE STYLE ]============================================== *
+ *   Contains the imports and variables for the open source page                                                      *
+ * ================================================================================================================== */
+
+@import "src/app/styles/colors";
+
+/* =======================================  End of GENERAL PAGE STYLE Section  ====================================== */
+
+
+/* ===================================================[ CONTENT ]==================================================== *
+ *   Contains all styling for the content section of the open source page                                             *
+ * ================================================================================================================== */
+
+#content {
+  display: grid;
+  grid-gap: 60px;
+  padding: 80px 125px;
+  background-color: $Shade_3;
+}
+
+#content > div h1 {
+  font-size: 50px;
+}
+
+#content > div p {
+  font-size: 22px;
+}
+
+/* ============================================  End of CONTENT Section  ============================================ */

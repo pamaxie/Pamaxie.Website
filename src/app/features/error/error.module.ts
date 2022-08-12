@@ -1,9 +1,22 @@
+/*
+ error.module.ts
+ Pamaxie - https://Pamaxie.com/
+ Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
+
+ Copyright © Pamaxie™ 2021 all rights reserved
+ */
+
+//CORE IMPORTS
 import {NgModule} from '@angular/core';
 import {CommonModule} from "@angular/common";
 
+//ERROR IMPORTS
 import {ErrorRoutingModule} from "./error.routing.module";
-import {ErrorComponent} from "./error.component";
+
+//COMPONENT IMPORTS
 import {ErrorPageComponent} from "./components/error-page/error-page.component";
+
+//CHILD COMPONENT IMPORTS
 import {NotFoundComponent} from "./pages/not-found/not-found.component";
 import {UnauthorizedComponent} from "./pages/unauthorized/unauthorized.component";
 import {ForbiddenComponent} from "./pages/forbidden/forbidden.component";
@@ -13,7 +26,6 @@ import {ServiceUnavailableComponent} from "./pages/service-unavailable/service-u
 
 @NgModule({
   declarations: [
-    ErrorComponent,
     ErrorPageComponent,
     ForbiddenComponent,
     UnauthorizedComponent,
@@ -28,7 +40,7 @@ import {ServiceUnavailableComponent} from "./pages/service-unavailable/service-u
   ],
   exports: [ErrorPageComponent],
   providers: [],
-  bootstrap: [ErrorComponent]
+  bootstrap: []
 })
 export class ErrorModule {
 }

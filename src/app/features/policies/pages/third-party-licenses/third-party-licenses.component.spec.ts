@@ -1,4 +1,4 @@
-/*!
+/*
  third-party-licenses.component.spec.ts
  Pamaxie - https://Pamaxie.com/
  Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
@@ -6,9 +6,9 @@
  Copyright © Pamaxie™ 2021 all rights reserved
  */
 
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ThirdPartyLicensesComponent } from './third-party-licenses.component';
+import {ThirdPartyLicensesComponent} from './third-party-licenses.component';
 
 describe('ThirdPartyLicensesComponent', () => {
   let component: ThirdPartyLicensesComponent;
@@ -16,9 +16,9 @@ describe('ThirdPartyLicensesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ThirdPartyLicensesComponent ]
+      declarations: [ThirdPartyLicensesComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

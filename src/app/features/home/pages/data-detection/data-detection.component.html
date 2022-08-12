@@ -1,1 +1,48 @@
-<home-feature-page [image]="image" [headerText]="headerText" [innerText]="innerHtml"></home-feature-page>
+<!--
+data-detection.component.html
+Pamaxie - https://Pamaxie.com/
+Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
+
+Copyright © Pamaxie™ 2021 all rights reserved
+-->
+
+<shared-image-header
+  image="app/assets/images/bg-header.png"
+  title="Build for more than just images"
+  subTitle="We developed our API to be extensible and detect more than just images. Learn how we will improve our service to feature more datasets to improve privacy in all sectors"></shared-image-header>
+<div id="content">
+  <div>
+    <h1>How we determine data types</h1>
+    <p>Since it’s hard for service providers to determine data types, we offer service endpoints to do it for them as
+      well. This allows for in flight analysis without having to rely on data extensions. The way we determine the
+      type of the data provided to us is via something called “magic numbers”. The magic numbers of file-types are
+      essentially pieces of data that make files distinguishable.
+      <br>
+      Once we determined the magic numbers, we then put it in the processing queue for the appropriate data type.
+      Which leads us to our next section onto what kind of data types we intend to support for now and which ones we
+      intend to support in the future.</p>
+  </div>
+  <div>
+    <h1>Supported data types now and in the future</h1>
+    <p>In the initial release of Pamaxie we will primarily focus on determining the data type of images. This is to
+      focus on ensuring our scanning system works reliably and well.
+      <br>
+      Our secondary goal from here on out would be detecting things like Videos. This is because it can build on top
+      of our image detection and can work over a key-frame extraction system using something like FFMPEG.
+      <br>
+      Our tertiary goal would be developing detection systems and determinations for texts. We do not plan to detect
+      hate-speech or anything like this. We believe dedicated solutions are better for that. We plan to detect
+      potentially triggering messages (like messages talking about self harm or other topics that can make people
+      uncomfortable).
+      <br><br>
+      Our quaternary goal will probably be working on detecting harmful files (like executables or zip files). This
+      will take a longer while since we need to start building up specific research projects into researching Harmful
+      files. We will not be able to replace your Anti-Virus software, but we do intend to detect the most harmful
+      type’s of files that are well known to be harmful to users.</p>
+  </div>
+  <div>
+    <h1>Some final words</h1>
+    <p>If you have more questions about the data types we are processing, feel free to join our discord server to ask
+      us more questions! We are happy to help you there!</p>
+  </div>
+</div>

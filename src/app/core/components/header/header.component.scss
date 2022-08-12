@@ -18,7 +18,7 @@
  *   Contains the imports and variables for the header component                                                      *
  * ================================================================================================================== */
 
-@import "src/app/styles/variables";
+@import "src/app/styles/colors";
 
 /* ====================================  End of GENERAL COMPONENT STYLE Section  ==================================== */
 
@@ -67,7 +67,7 @@
 //<div class="fixed flex flex-row h-inherit w-full bg-tertiary z-30"
 //style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06), 0 4px 6px rgba(0, 0, 0, 0.1)">
 //<app-sidebar-menu></app-sidebar-menu>
-//<a routerLink="/" routerLinkActive="active">
+//<a routerLink="/">
 //<img src="app/assets/images/logo.png" alt="" class="absolute m-auto top-0 bottom-0 left-0 right-0"/>
 //</a>
 //<div class="flex items-center absolute m-auto top-0 bottom-0 right-0" style="margin-right: 1rem">

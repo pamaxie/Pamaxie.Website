@@ -1,4 +1,4 @@
-/*!
+/*
  pamaxie-w-name.component.spec.ts
  Pamaxie - https://Pamaxie.com/
  Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
@@ -6,9 +6,9 @@
  Copyright © Pamaxie™ 2021 all rights reserved
  */
 
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { PamaxieWNameComponent } from './pamaxie-w-name.component';
+import {PamaxieWNameComponent} from './pamaxie-w-name.component';
 
 describe('PamaxieWNameComponent', () => {
   let component: PamaxieWNameComponent;
@@ -16,9 +16,9 @@ describe('PamaxieWNameComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PamaxieWNameComponent ]
+      declarations: [PamaxieWNameComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

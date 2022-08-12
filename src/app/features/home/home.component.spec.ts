@@ -1,4 +1,4 @@
-/*!
+/*
  home.component.spec.ts
  Pamaxie - https://Pamaxie.com/
  Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/

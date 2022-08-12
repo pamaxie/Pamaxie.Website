@@ -1,1 +1,60 @@
-<home-feature-page [image]="image" [headerText]="headerText" [innerText]="innerHtml"></home-feature-page>
+<!--
+data-privacy.component.html
+Pamaxie - https://Pamaxie.com/
+Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
+
+Copyright © Pamaxie™ 2021 all rights reserved
+-->
+
+<shared-image-header
+  image="app/assets/images/bg-header.png"
+  title="Your Data stays yours"
+  subTitle="We here at pamaxie value user privacy, because it is a central part of our mission. The issue with a lot of closed source code is, that you never know what happens to your data. Here we will explain you how we process and handle your data through our entire scanning process"></shared-image-header>
+<div id="content">
+  <div>
+    <h1>How we collect data</h1>
+    <p>At the start of our processing queue comes whoever submits your data to us. This is a central part of our
+      processing since we essentially function as a service other service providers integrate with. Because of this, we
+      require service providers to make a promise to us: They are not allowed to use any of your data submitted to our
+      scanning api in any way that it would be harmful. This includes sharing that data with advertisers. We value
+      privacy with our service and we require our service providers to have the same standards, to not sell user data,
+      especially ones that could make them vulnerable to attacks.
+      <br>
+      Once the data has been sent to us, we sadly do have to store it for a short amount of time, while we queue it for
+      processing. After this we start the scanning process.</p>
+  </div>
+  <div>
+    <h1>How we scan your data</h1>
+    <p>After receiving your data and storing it for our processing our scan nodes ask for some work. These scan nodes
+      can either be our own or the ones deployed by your service provider. Nobody else is able to request and see your
+      data.
+      <br>
+      When a work node receives a piece of work we essentially download said image from our temporary storage and then
+      start our processing steps. What we do is analyze your image data to determine if it contains harmful content, or
+      content your service provider determined to be harmful to be seen by a group of users.
+      <br>
+      After we finished our scan we return these results which then can be requested back by your service provider. What
+      we also do is save your images “hash” (essentially a key generated out of your image) with the scan results to be
+      able to more quickly retrieve the data later on. The hash of the image is safe and can only be generated if you
+      “own” the source image. This means since we deleted the source image only someone with the same image can see the
+      results for the scan, at which point it is required to be retrieved. We can also not “regenerate” the image out of
+      the hash since it only works one way (see it like a mathematical operation saying 2 + 2 = 4, where you cannot say
+      how you got to the result without the actual equation).</p>
+  </div>
+  <div>
+    <h1>How you know we’re not lying</h1>
+    <p>We know a lot of service providers claim that their scanning processes are safe and anonymize but end up selling
+      your data anyways. This is why we decided Pamaxie to be open source. This way everyone can see the source code we
+      develop for Pamaxie’s service’s and independent researchers and developers can vet it to ensure it’s actually safe
+      for your data.
+      <br>
+      This is insanely important to ensure user privacy, since if you cannot see how someone processes your data you
+      cannot ensure it is actually never processed in a manner you dislike.</p>
+  </div>
+  <div>
+    <h1>Some final words</h1>
+    <p>We hope that you appreciate how we handle your data and that we’re open about how we process it. If you have more
+      questions about how we process your data, feel free to join our discord server to ask us more questions! We are
+      happy to help you there!</p>
+  </div>
+</div>

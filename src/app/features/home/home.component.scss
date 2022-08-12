@@ -19,7 +19,7 @@
  *   Contains the imports and variables for the home page                                                             *
  * ================================================================================================================== */
 
-@import "src/app/styles/variables";
+@import "src/app/styles/colors";
 @import "src/app/styles/functions";
 
 /* =======================================  End of GENERAL PAGE STYLE Section  ====================================== */
@@ -31,6 +31,7 @@
 
 #header {
   height: calc(100vh - 4rem);
+  background-color: $Shade_2;
 }
 
 #header img {
@@ -112,6 +113,7 @@
 #information > div {
   @include positioning;
   display: grid;
+  grid-template: auto auto auto 1fr / 1fr;
   width: 100%;
   margin: 80px 20px;
   color: $Color_Light;

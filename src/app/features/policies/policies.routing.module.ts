@@ -1,4 +1,4 @@
-/*!
+/*
  policies.routing.module.ts
  Pamaxie - https://Pamaxie.com/
  Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
@@ -6,9 +6,11 @@
  Copyright © Pamaxie™ 2021 all rights reserved
  */
 
+//CORE IMPORTS
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 
+//PAGE COMPONENTS
 import {PrivacyComponent} from "./pages/privacy/privacy.component";
 import {TermsOfServiceComponent} from "./pages/terms-of-service/terms-of-service.component";
 import {ThirdPartyLicensesComponent} from "./pages/third-party-licenses/third-party-licenses.component";

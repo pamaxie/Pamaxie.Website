@@ -7,14 +7,16 @@ Copyright © Pamaxie™ 2021 all rights reserved
 -->
 
 <div id="header" class="h-12">
-  <a href="/"><app-pamaxie-w-name></app-pamaxie-w-name></a>
+  <a routerLink="/">
+    <app-pamaxie-w-name></app-pamaxie-w-name>
+  </a>
   <div>
-    <a routerLink="" routerLinkActive="active">Dashboard</a>
-    <a routerLink="" routerLinkActive="active">Downloads</a>
-    <a routerLink="resources/support" routerLinkActive="active">Support</a>
-    <a routerLink="company/blog" routerLinkActive="active">Blog</a>
-    <a routerLink="" routerLinkActive="active">Security</a>
-    <a routerLink="" routerLinkActive="active">Donate</a>
+    <a routerLink="">Dashboard</a>
+    <a routerLink="">Downloads</a>
+    <a routerLink="resources/support">Support</a>
+    <a routerLink="company/blog">Blog</a>
+    <a routerLink="">Security</a>
+    <a routerLink="">Donate</a>
   </div>
   <div>
     <a class="openDyslexic" (click)="toggleOpenDyslexic()">O</a>

@@ -11,7 +11,6 @@
  *                                                                                                                    *
  *   Table of Content                                                                                                 *
  *   - General Page Style                                                                                             *
- *   - Header                                                                                                         *
  *   - Content                                                                                                        *
  * ================================================================================================================== */
 
@@ -19,57 +18,9 @@
  *   Contains the imports and variables for the license page                                                          *
  * ================================================================================================================== */
 
-@import "src/app/styles/variables";
+@import "src/app/styles/colors";
 
 /* =======================================  End of GENERAL PAGE STYLE Section  ====================================== */
-
-
-/* ====================================================[ HEADER ]==================================================== *
- *   Contains all styling for the header section of the license page                                                  *
- * ================================================================================================================== */
-
-#header {
-  height: calc(100vh - 4rem);
-}
-
-#header img {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  filter: brightness(60%) grayscale(50%);
-}
-
-#header > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: fit-content;
-}
-
-#header h1 {
-  margin: 15px;
-  width: 1200px;
-  font-size: 60px;
-  text-align: center;
-  color: $Color_Light;
-}
-
-#header p {
-  margin: 15px;
-  width: 840px;
-  font-size: 25px;
-  text-align: center;
-  color: $Color_Light;
-}
-
-/* =============================================  End of HEADER Section  ============================================ */
 
 
 /* ===================================================[ CONTENT ]==================================================== *

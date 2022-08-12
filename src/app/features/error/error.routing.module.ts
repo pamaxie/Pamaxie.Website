@@ -1,7 +1,16 @@
+/*
+ error.routing.module.ts
+ Pamaxie - https://Pamaxie.com/
+ Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
+
+ Copyright © Pamaxie™ 2021 all rights reserved
+ */
+
+//CORE IMPORTS
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 
-import {ErrorComponent} from "./error.component";
+//PAGE COMPONENTS
 import {UnauthorizedComponent} from "./pages/unauthorized/unauthorized.component";
 import {ForbiddenComponent} from "./pages/forbidden/forbidden.component";
 import {NotFoundComponent} from "./pages/not-found/not-found.component";
@@ -11,7 +20,7 @@ import {ServiceUnavailableComponent} from "./pages/service-unavailable/service-u
 
 const routes: Routes = [
   {
-    path: '', component: ErrorComponent, children: [
+    path: '', children: [
       {path: '401', component: UnauthorizedComponent},
       {path: '403', component: ForbiddenComponent},
       {path: '404', component: NotFoundComponent},

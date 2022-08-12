@@ -1,4 +1,4 @@
-/*!
+/*
  user.ts
  Pamaxie - https://Pamaxie.com/
  Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
@@ -17,7 +17,7 @@ export interface User {
   FirstName: string;
   PasswordHash: string;
   KnownIps: string[];
-  Projects: {Item1: Project, Item2: string}[];
+  Projects: { Item1: Project, Item2: string }[];
   Flags: UserFlags;
   CreationDate: Date;
   TTL: Date;

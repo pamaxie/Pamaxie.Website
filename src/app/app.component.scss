@@ -18,8 +18,7 @@
  *   Contains the imports and variables for the core part of the website                                              *
  * ================================================================================================================== */
 
-@import "styles/libs/tailwind.min.css";
-@import "src/app/styles/index.scss";
+@import "src/app/styles/colors";
 @import "src/app/styles/variables";
 @import "src/app/styles/functions";
 
@@ -30,13 +29,20 @@
  *   Contains all styling for core part of the website                                                                *
  * ================================================================================================================== */
 
+*, ::after, ::before {
+  box-sizing: border-box;
+  border-width: 0;
+}
+
 html {
   height: 100%;
   overflow-y: scroll;
   font-family: Quicksand, serif;
+  line-height: 1.5;
 }
 
 body {
+  margin: 0;
   width: 100%;
   overflow: hidden
 }
@@ -45,12 +51,10 @@ body {
   font-family: OpenDyslexic, serif !important;
 }
 
-h1, p, span {
+h1, h2, p, span {
+  margin: 0;
+  font-weight: normal;
   color: $Color_Light;
-}
-
-p, span {
-  line-height: 150%;
 }
 
 a {
@@ -58,6 +62,16 @@ a {
   @include link_active($Color_Link);
   color: $Color_Link;
   cursor: pointer;
+  text-decoration: inherit;
+}
+
+::-webkit-scrollbar {
+  background-color: #403F3F;
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1F1F1F;
 }
 
 /* ==============================================  End of APP Section  ============================================== */

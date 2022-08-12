@@ -1,4 +1,4 @@
-/*!
+/*
  terms-of-service.component.spec.ts
  Pamaxie - https://Pamaxie.com/
  Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
@@ -6,9 +6,9 @@
  Copyright © Pamaxie™ 2021 all rights reserved
  */
 
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { TermsOfServiceComponent } from './terms-of-service.component';
+import {TermsOfServiceComponent} from './terms-of-service.component';
 
 describe('TermsOfServiceComponent', () => {
   let component: TermsOfServiceComponent;
@@ -16,9 +16,9 @@ describe('TermsOfServiceComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TermsOfServiceComponent ]
+      declarations: [TermsOfServiceComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

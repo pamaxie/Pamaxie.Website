@@ -10,8 +10,8 @@ export class TooManyRequestsComponent implements OnInit {
   headerText: string = '429 - TOO MANY REQUESTS'
   bodyText: string = 'Due to too many requests from your IP address or computer we had to block you from establishing a connection with our website. If you think this was a mistake feel free to contact support or check the service status to see if there is any issues with our servers.';
   buttonInfo: { text: string; path: string; }[] = [
-    {'text': 'Contact Support', 'path': '/support'},
-    {'text': 'Service Status', 'path': '/status'}
+    {'text': 'Contact Support', 'path': '/resources/support'},
+    {'text': 'Service Status', 'path': '/products/status'}
   ];
 
   constructor() {
