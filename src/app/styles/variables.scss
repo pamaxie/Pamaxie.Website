@@ -12,10 +12,16 @@
 
 @import "colors";
 
+//Page Background
+$Page_Background: $Shade_1;
+
 //Buttons
-$button_hover_brightness: 5%;
-$button_active_brightness: 10%;
+$Button_Hover_Brightness: 5%;
+$Button_Active_Brightness: 10%;
 
 //Links
-$link_hover_brightness: 5%;
-$link_active_brightness: 10%;
+$Link_Hover_Brightness: 5%;
+$Link_Active_Brightness: 10%;
+
+//Font Variables
+$Font-Stroke-Color: $Shade_1;

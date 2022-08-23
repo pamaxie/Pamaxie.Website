@@ -20,6 +20,7 @@
  * ================================================================================================================== */
 
 @import "src/app/styles/colors";
+@import "src/app/styles/variables";
 
 /* =======================================  End of GENERAL PAGE STYLE Section  ====================================== */
 
@@ -28,5 +29,8 @@
  *   Contains all styling for the content section of the third party licenses page                                    *
  * ================================================================================================================== */
 
+#content {
+  background-color: $Page_Background;
+}
 
 /* ============================================  End of CONTENT Section  ============================================ */

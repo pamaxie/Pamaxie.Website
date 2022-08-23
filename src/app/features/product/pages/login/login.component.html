@@ -1,0 +1,31 @@
+<!--
+login.component.html
+Pamaxie - https://Pamaxie.com/
+Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
+
+Copyright © Pamaxie™ 2021 all rights reserved
+-->
+
+<div id="content">
+  <img src="app/assets/images/bg-header.png" alt=""/>
+  <form [formGroup]="form" #formDirective="ngForm">
+    <h1>Dashboard Login</h1>
+    <div>
+      <input formControlName="username" type="text" autocomplete="off" placeholder=" "/>
+      <p>Username</p>
+    </div>
+    <div>
+      <input formControlName="password" type="password" autocomplete="off" placeholder=" "/>
+      <p>Password</p>
+    </div>
+    <div>
+      <label>
+        <input formControlName="rememberMe" type="checkbox"/>
+        <div></div>
+      </label>
+      <p>keep me signed in</p>
+    </div>
+    <button [disabled]="form.invalid && formDirective.submitted" (click)="login()">Login</button>
+    <p>Don't have an account? <a routerLink="/Register">Request Access</a></p>
+  </form>
+</div>

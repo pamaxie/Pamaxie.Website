@@ -1,0 +1,66 @@
+/*!
+ dropdown.component.scss
+ Pamaxie - https://Pamaxie.com/
+ Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
+
+ Copyright © Pamaxie™ 2021 all rights reserved
+ */
+
+/* ===========================================[ dropdown.component.scss ]============================================ *
+ *   This document contains all styling for dropdown.component                                                        *
+ * ================================================================================================================== */
+
+@import "src/app/styles/colors";
+@import "src/app/styles/variables";
+@import "src/app/styles/functions";
+
+#dropdown {
+  position: relative;
+  height: inherit;
+  width: inherit;
+
+  & > button {
+    position: relative;
+    padding: 8px 10px;
+    height: inherit;
+    width: inherit;
+    background-color: $Shade_4;
+    border: 1px solid $Shade_3;
+    border-radius: 2px;
+    text-align: left;
+    font-size: 18px;
+    color: $Color_Textual_White;
+    cursor: pointer;
+
+    &:after {
+      content: attr(icon);
+      position: absolute;
+      display: flex;
+      align-items: center;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      padding: 8px 10px;
+    }
+  }
+
+  & > div {
+    position: absolute;
+    max-height: 200px;
+    width: inherit;
+    background-color: $Shade_3;
+    border: 1px solid $Shade_2;
+    overflow-y: scroll;
+    z-index: 10;
+
+    & > p {
+      padding: 0 10px;
+      cursor: pointer;
+
+      &:hover {
+        @include button_hover($Shade_3)
+      }
+    }
+  }
+}

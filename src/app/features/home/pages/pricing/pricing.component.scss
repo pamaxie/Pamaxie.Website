@@ -19,6 +19,7 @@
  * ================================================================================================================== */
 
 @import "src/app/styles/colors";
+@import "src/app/styles/variables";
 
 /* =======================================  End of GENERAL PAGE STYLE Section  ====================================== */
 
@@ -31,7 +32,7 @@
   display: grid;
   grid-gap: 60px;
   padding: 80px 125px;
-  background-color: $Shade_3;
+  background-color: $Page_Background;
 }
 
 #content h1 {
@@ -47,21 +48,22 @@
   grid-template: 1fr / 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 25px;
   margin: 0 15px;
-}
 
-#content > div:first-of-type > div > div > p:first-of-type {
-  font-size: 30px;
-  margin-bottom: 8px;
+  & > div > p:first-of-type {
+    font-size: 30px;
+    margin-bottom: 8px;
+  }
 }
 
 #content > div:nth-child(2) > div {
   display: grid;
   grid-template: auto auto auto / 1fr 1fr;
   grid-gap: 40px 100px;
-}
+  margin: 0 15px;
 
-#content > div:nth-child(2) > div > div p:first-of-type {
-  font-size: 30px;
+  & > div p:first-of-type {
+    font-size: 30px;
+  }
 }
 
 /* ============================================  End of CONTENT Section  ============================================ */

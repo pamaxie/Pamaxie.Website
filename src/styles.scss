@@ -9,8 +9,17 @@
 /* =================================================[ styles.scss ]================================================== *
  *   This document contains all imports and styling from external sources                                             *
  *   You can add global styles to this file, and also import other style files                                        *
+ *                                                                                                                    *
+ *   Table of Content                                                                                                 *
+ *   - General                                                                                                        *
  * ================================================================================================================== */
 
+
+/* ===================================================[ GENERAL ]==================================================== *
+ *   Contains imports, variables and general styling for the website                                                  *
+ * ================================================================================================================== */
+
+@import "src/app/styles/colors";
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 
 @font-face {
@@ -19,3 +28,14 @@
   font-style: normal;
   font-weight: normal;
 }
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* ============================================  End of GENERAL Section  ============================================ */

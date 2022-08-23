@@ -22,13 +22,13 @@ import {OpenSourceComponent} from "./pages/open-source/open-source.component";
 import {DataPrivacyComponent} from "./pages/data-privacy/data-privacy.component";
 
 @NgModule({
-  declarations: [
-    HomeComponent,
-    DataDetectionComponent,
-    PricingComponent,
-    OpenSourceComponent,
-    DataPrivacyComponent
-  ],
+    declarations: [
+        HomeComponent,
+        DataDetectionComponent,
+        PricingComponent,
+        OpenSourceComponent,
+        DataPrivacyComponent
+    ],
   imports: [
     HomeRoutingModule,
     CommonModule,

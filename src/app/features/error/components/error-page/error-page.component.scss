@@ -1,72 +1,86 @@
+/*!
+ error-page.component.scss
+ Pamaxie - https://Pamaxie.com/
+ Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
+
+ Copyright © Pamaxie™ 2021 all rights reserved
+ */
+
+/* ==========================================[ error-page.component.scss ]=========================================== *
+ *   This document contains all styling for error-page.component                                                      *
+ *                                                                                                                    *
+ *   Table of Content                                                                                                 *
+ *   - General Page Style                                                                                             *
+ *   - Content                                                                                                        *
+ * ================================================================================================================== */
+
+/* ===========================================[ GENERAL COMPONENT STYLE ]============================================ *
+ *   Contains the imports and variables for the error page component                                                  *
+ * ================================================================================================================== */
+
 @import "src/app/styles/colors";
+@import "src/app/styles/variables";
 @import "src/app/styles/functions";
 
-#error {
+/* ====================================  End of GENERAL COMPONENT STYLE Section  ==================================== */
+
+/* ===================================================[ CONTENT ]==================================================== *
+ *   Contains all styling for the content section of the error page component                                         *
+ * ================================================================================================================== */
+
+#content {
+  position: relative;
   display: flex;
   flex-direction: row;
-  height: calc(100vh - 4rem - 18rem);
-  background-color: $Shade_3;
+  height: calc(100vh - 18rem);
+  background-color: $Page_Background;
 }
 
-#error > div {
+#content > img:first-of-type {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  //filter: brightness(60%) grayscale(50%);
+}
+
+#content > div {
   flex: 1;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 4rem;
+  margin: 8rem 4rem 4rem 4rem;
 }
 
-#error > div > img {
-  height: 8rem;
-  object-fit: contain;
+#content > div > h1 {
+  @include font-stroke(1, $Font-Stroke-Color);
+  margin: 20px 10px;
+  font-weight: bold;
+  font-size: 60px;
 }
 
-#error > div > h1 {
-  margin: 0 10px;
+#content > div > h2 {
+  @include font-stroke(1, $Font-Stroke-Color);
+  margin: 20px 0;
+  font-weight: bold;
   font-size: 30px;
-}
-
-#error > div > p {
-  font-size: 22px;
   text-align: center;
   max-width: 830px;
 }
 
-#error > div > a {
-  @include button_hover($Color_Primary_1);
-  @include button_active($Color_Primary_1);
+#content > div > a {
+  @include button_hover($Color_Primary);
+  @include button_active($Color_Primary);
   display: block;
   margin: 10px;
   padding: 8px 26px;
   width: 200px;
   border-radius: 4px;
-  background-color: $Color_Primary_1;
-  color: $Color_Light;
+  background-color: $Color_Primary;
+  color: $Color_Textual_White;
   text-align: center;
 }
 
-#error > img {
-  flex: 0 1 40%;
-  height: 100%;
-  object-fit: cover;
-  overflow: hidden;
-  background-color: $Shade_2;
-}
-
-
-//<div class="flex flex-row h-screen-24 bg-secondary">
-//<div class="flex flex-col flex-1 justify-center items-center m-8">
-//<img [src]="logo" alt="" class="h-32 object-contain"/>
-//<h1 class="m-2-8 text-4xl text-gray-primary font-bold">{{headerText}}</h1>
-//<p class="m-2-8 text-2 text-gray-primary text-center" style="max-width: 830px">
-//                                                                              {{bodyText}}
-//</p>
-//<a *ngFor="let info of buttonInfo"
-//class="block px-4 py-2 bg-tertiary rounded-full text-gray-primary hover:bg-primary" style="margin: 3px"
-//[routerLink]="info.path">
-//                        {{info.text}}
-//</a>
-//</div>
-//<img [src]="image" alt="" class="flex-2-5 h-full object-cover overflow-hidden bg-tertiary"/>
-//</div>
+/* ============================================  End of CONTENT Section  ============================================ */

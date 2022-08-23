@@ -1,0 +1,66 @@
+<!--
+register.component.html
+Pamaxie - https://Pamaxie.com/
+Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
+
+Copyright © Pamaxie™ 2021 all rights reserved
+-->
+
+<div id="content">
+  <img src="app/assets/images/bg-header.png" alt=""/>
+  <form [formGroup]="form" #formDirective="ngForm">
+    <h1>Register for API Access</h1>
+    <div>
+      <input formControlName="firstname" type="text" autocomplete="off" placeholder=" "/>
+      <p>First Name</p>
+    </div>
+    <div>
+      <input formControlName="lastname" type="text" autocomplete="off" placeholder=" "/>
+      <p>Last Name</p>
+    </div>
+    <div>
+      <input formControlName="username" type="text" autocomplete="off" placeholder=" "/>
+      <p>Username</p>
+    </div>
+    <div>
+      <input formControlName="email" type="text" autocomplete="off" placeholder=" "/>
+      <p>Email Address</p>
+    </div>
+    <div>
+      <input formControlName="password" type="password" autocomplete="off" placeholder=" "/>
+      <p>Password</p>
+    </div>
+    <div>
+      <input formControlName="repeatPassword" type="password" autocomplete="off" placeholder=" "/>
+      <p>Repeat Password</p>
+    </div>
+    <p>Date of Birth</p>
+    <div>
+      <app-dropdown [options]="optionsDay" [(currentSelected)]="currentSelectedDay"></app-dropdown>
+      <app-dropdown [options]="optionsMonth" [(currentSelected)]="currentSelectedMonth"></app-dropdown>
+      <app-dropdown [options]="optionsYear" [(currentSelected)]="currentSelectedYear"></app-dropdown>
+    </div>
+    <div>
+      <label>
+        <input formControlName="privacy" type="checkbox"/>
+        <div></div>
+      </label>
+      <p>I have read and agree to the <a routerLink="/privacy">privacy policy</a></p>
+    </div>
+    <div>
+      <label>
+        <input formControlName="tos" type="checkbox"/>
+        <div></div>
+      </label>
+      <p>I have read and agree to the <a routerLink="/tos">terms of service</a></p>
+    </div>
+    <div>
+      <label>
+        <input formControlName="cos" type="checkbox"/>
+        <div></div>
+      </label>
+      <p>I have read and agree to the <a routerLink="/cod">code of conduct</a></p>
+    </div>
+    <button [disabled]="form.invalid && formDirective.submitted" (click)="request()">Request Access</button>
+  </form>
+</div>

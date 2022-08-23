@@ -10,19 +10,36 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from "@angular/common";
 import {SharedModule} from "../../shared/shared.module";
+import {ReactiveFormsModule} from "@angular/forms";
+
+//MATERIAL IMPORTS
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatInputModule} from "@angular/material/input";
+import {MatDatepickerModule} from "@angular/material/datepicker";
 
 //PRODUCT IMPORTS
 import {ProductRoutingModule} from './product.routing.module';
 
 //CHILD COMPONENT IMPORTS
+import {RegisterComponent} from "./pages/register/register.component";
+import {LoginComponent} from "./pages/login/login.component";
+import {CodeOfConductComponent} from "./pages/code-of-conduct/code-of-conduct.component";
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    RegisterComponent,
+    LoginComponent,
+    CodeOfConductComponent
+  ],
   imports: [
     ProductRoutingModule,
     CommonModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule,
+    MatNativeDateModule,
+    MatInputModule,
+    MatDatepickerModule
   ],
   exports: [],
   providers: [],

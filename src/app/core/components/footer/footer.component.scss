@@ -31,7 +31,7 @@
   display: grid;
   grid-template: 1fr / 1fr 1fr auto;
   justify-items: center;
-  padding: 40px;
+  padding: 40px 30px;
   height: 18rem;
   background-color: $Shade_1;
 }
@@ -41,57 +41,71 @@
   margin: auto 0;
   font-size: 45px;
   text-align: center;
-  color: #E64D67;
+  color: $Color_Link;
 }
 
 #footer > div:first-of-type {
-  display: grid;
-  grid-template: auto auto / 1fr;
-  margin: auto;
-  height: fit-content;
-  width: fit-content;
-}
+  //Style for those who funded us
+  & > p {
+    grid-area: 1 / 1 / 1 / 3;
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 16px;
+  }
 
-#footer > div:first-of-type > p {
-  grid-area: 1 / 1 / 1 / 3;
-  font-size: 16px;
-}
+  & > div:first-of-type {
+    margin: 4px 0;
+    height: 2px;
+    width: 100%;
+    border-radius: 4px;
+    background-color: $Shade_2;
+  }
 
-#footer > div:first-of-type > div {
-  display: grid;
-  grid-template: auto / 1fr 1fr;
-  align-items: center;
-  justify-items: center;
+  & > div:last-of-type {
+    display: grid;
+    grid-template: auto/auto auto;
+    grid-gap: 15px;
+    align-items: center;
+    justify-items: center;
+    margin: 10px;
+  }
 }
 
 #footer > div:last-of-type {
+  //Style for navigation area
   display: grid;
   grid-template: 1fr / 1fr 1fr 1fr 1fr;
-}
 
-#footer > div:last-of-type > div {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 0 20px
-}
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 20px
+  }
 
-#footer > div:last-of-type p {
-  font-size: 16px;
-}
+  & p {
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 16px;
+  }
 
-#footer > div:last-of-type > div > div {
-  margin: 4px 0;
-  height: 2px;
-  width: 100%;
-  border-radius: 4px;
-  background-color: $Shade_3;
-}
+  & > div > div {
+    margin: 4px 0;
+    height: 2px;
+    width: 100%;
+    border-radius: 4px;
+    background-color: $Shade_2;
+  }
 
-#footer > div:last-of-type a {
-  margin: 2px 20px;
-  font-size: 16px;
-  color: $Color_Light;
+  & a {
+    margin: 0 10px;
+    font-size: 16px;
+    color: $Color_Link;
+
+    & + a {
+      margin-top: 5px;
+    }
+  }
 }
 
 /* =============================================  End of FOOTER Section  ============================================ */

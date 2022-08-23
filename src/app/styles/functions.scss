@@ -8,34 +8,93 @@
 
 /* ================================================[ functions.scss ]================================================ *
  *   This document contains all styling functions                                                                     *
+ *                                                                                                                    *
+ *   Table of Content                                                                                                 *
+ *   - General Component Style                                                                                        *
+ *   - Fonts                                                                                                          *
+ *   - Buttons                                                                                                        *
+ *   - Links                                                                                                          *
  * ================================================================================================================== */
 
+/* ===========================================[ GENERAL FUNCTION IMPORTS ]=========================================== *
+ *   Contains the imports for the style function document                                                             *
+ * ================================================================================================================== */
+
+@import "colors";
 @import "variables";
 
-//Button :hover
-@mixin button_hover($background_color) {
+/* =======================================  End of FUNCTION IMPORTS Section  ======================================== */
+
+
+/* ====================================================[ FONTS ]===================================================== *
+ *   Contains all functions used for fonts                                                                            *
+ * ================================================================================================================== */
+
+/// Stroke font-character
+// @param     {Integer}   $stroke   -   Stroke width
+// @param     {Color}     $color    -   Stroke color
+// @return    {Style}               -   text-shadow
+@mixin font-stroke($stroke, $color) {
+  $shadow: ();
+  $from: $stroke*-1;
+  @for $i from $from through $stroke {
+    @for $j from $from through $stroke {
+      $shadow: append($shadow, $i*1px $j*1px 0 $color, comma);
+    }
+  }
+  text-shadow: $shadow;
+}
+
+/* =============================================  End of FONTS Section  ============================================= */
+
+
+/* ===================================================[ BUTTONS ]==================================================== *
+ *   Contains all functions used for buttons                                                                          *
+ * ================================================================================================================== */
+
+// Button :hover
+// @param     {Color}     $color    -   Button background color
+// @return    {Style}               -   background-color
+@mixin button_hover($color) {
   &:hover {
-    background-color: lighten($background_color, $button_hover_brightness);
+    background-color: lighten($color, $Button_Hover_Brightness);
   }
 }
 
-//Button :active
-@mixin button_active($background_color) {
+/// Button :active
+/// @param     {Color}     $color    -   Button background color
+/// @return    {Style}               -   background-color
+@mixin button_active($color) {
   &:active {
-    background-color: lighten($background_color, $button_active_brightness);
+    background-color: lighten($color, $Button_Active_Brightness);
   }
 }
 
-//Link :hover
+/* ============================================  End of BUTTONS Section  ============================================ */
+
+
+/* ====================================================[ LINKS ]===================================================== *
+ *   Contains all functions used for links                                                                            *
+ * ================================================================================================================== */
+
+// Link :hover
+// @param     {Color}     $color    -   Link text color
+// @return    {Style}               -   color
 @mixin link_hover($color) {
   &:hover {
-    color: lighten($color, $link_hover_brightness);
+    color: lighten($color, $Link_Hover_Brightness);
   }
 }
 
 //Link :active
+/// Stroke font-character
+// @param     {Color}     $color    -   Link text color
+// @return    {Style}               -   color
 @mixin link_active($color) {
   &:active {
-    color: lighten($color, $link_active_brightness);
+    color: lighten($color, $Link_Active_Brightness);
   }
 }
+
+/* =============================================  End of LINKS Section  ============================================= */
+

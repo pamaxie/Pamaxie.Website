@@ -6,8 +6,8 @@
  Copyright © Pamaxie™ 2021 all rights reserved
  */
 
-/* ============================================[ footer.component.scss ]============================================= *
- *   This document contains all styling for home.component                                                            *
+/* ========================================[ prototype-fund.component.scss ]========================================= *
+ *   This document contains all styling for prototype-fund.component                                                  *
  *                                                                                                                    *
  *   Table of Content                                                                                                 *
  *   - Prototype Fund                                                                                                 *
@@ -15,7 +15,7 @@
 
 
 /* ================================================[ PROTOTYPE FUND ]================================================ *
- *   Contains all styling for the header section of the home page                                                     *
+ *   Contains all styling for the prototype fund logo component                                                       *
  * ================================================================================================================== */
 
 #prototype-fund {
@@ -26,17 +26,19 @@
 #prototype-fund > div {
   display: grid;
   grid-gap: 2px;
-}
 
-#prototype-fund > div > div:first-of-type,
-#prototype-fund > div > div:last-of-type {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-}
+  & > div {
+    &:first-of-type,
+    &:last-of-type {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+    }
 
-#prototype-fund > div > div > svg {
-  overflow: visible;
+    & > svg {
+      overflow: visible;
+    }
+  }
 }
 
 /* =========================================  End of PROTOTYPE FUND Section  ======================================== */

@@ -17,6 +17,8 @@ export class ImageHeaderComponent implements OnInit {
   @Input() image: string = '';
   @Input() title: string = '';
   @Input() subTitle: string = '';
+  @Input() buttonText: string = '';
+  @Input() buttonLink: string = '';
 
   constructor() {
   }

@@ -34,10 +34,10 @@ import {ServiceUnavailableComponent} from "./pages/service-unavailable/service-u
     BadGatewayComponent,
     ServiceUnavailableComponent
   ],
-  imports: [
-    ErrorRoutingModule,
-    CommonModule
-  ],
+    imports: [
+        ErrorRoutingModule,
+        CommonModule
+    ],
   exports: [ErrorPageComponent],
   providers: [],
   bootstrap: []

@@ -19,6 +19,7 @@
  * ================================================================================================================== */
 
 @import "src/app/styles/colors";
+@import "src/app/styles/variables";
 
 /* =======================================  End of GENERAL PAGE STYLE Section  ====================================== */
 
@@ -32,60 +33,66 @@
   justify-items: center;
   grid-gap: 60px;
   padding: 80px 125px;
-  background-color: $Shade_3;
+  background-color: $Page_Background;
   text-align: center;
 }
 
-#content > div > h1 {
-  font-size: 50px;
-}
+#content > div {
+  & > h1 {
+    font-size: 50px;
 
-#content > div > h1 > span:first-of-type {
-  color: $Color_Primary_1;
-}
+    & > span:first-of-type {
+      color: $Color_Primary;
+    }
 
-#content > div > h1 > span:last-of-type {
-  color: $Color_Primary_2;
-}
+    & > span:last-of-type {
+      color: $Color_Primary;
+    }
+  }
 
-#content > div p {
-  font-size: 22px;
-}
+  & p {
+    font-size: 22px;
+  }
 
-#content > div:nth-child(2) {
-  max-width: 900px;
-}
+  &:nth-child(2) {
+    max-width: 900px;
 
-#content > div:nth-child(2) > div {
-  display: grid;
-  grid-gap: 30px;
-  margin-top: 30px;
-}
+    & > div {
+      display: grid;
+      grid-gap: 30px;
+      margin-top: 30px;
 
-#content > div:nth-child(2) > div h1 {
-  font-size: 30px;
-  color: $Color_Primary_2;
-}
+      & h1 {
+        font-size: 30px;
+        color: $Color_Primary;
+      }
+    }
+  }
 
-#content > div:last-of-type > p:last-of-type {
-  display: grid;
-  grid-template: auto auto / 1fr auto auto 1fr;
-  grid-gap: 0 5px;
-}
+  &:last-of-type > p {
+    &:last-of-type {
+      display: grid;
+      grid-template: auto auto / 1fr auto auto 1fr;
+      grid-gap: 0 5px;
+    }
 
-#content > div:last-of-type > p > span {
-  grid-area: 1 / 2;
-  text-align: right;
-}
+    & > span {
+      grid-area: 1 / 2;
+      text-align: right;
+    }
 
-#content > div:last-of-type > p > a:first-of-type {
-  grid-area: 1 / 3;
-  text-align: left;
-}
+    & > a {
+      &:first-of-type {
+        grid-area: 1 / 3;
+        text-align: left;
+      }
 
-#content > div:last-of-type > p > a:last-of-type {
-  grid-area: 2 / 3;
-  text-align: left;
+      &:last-of-type {
+        grid-area: 2 / 3;
+        text-align: left;
+      }
+    }
+  }
 }
 
 /* =============================================  End of CONTENT Section  ============================================ */

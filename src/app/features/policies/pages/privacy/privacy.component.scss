@@ -19,6 +19,7 @@
  * ================================================================================================================== */
 
 @import "src/app/styles/colors";
+@import "src/app/styles/variables";
 
 /* =======================================  End of GENERAL PAGE STYLE Section  ====================================== */
 
@@ -28,7 +29,7 @@
  * ================================================================================================================== */
 
 #content {
-  background-color: $Shade_3;
+  background-color: $Page_Background;
 }
 
 #content > div:first-of-type {
@@ -41,14 +42,14 @@
   display: grid;
   grid-gap: 60px;
   padding: 80px 125px;
-}
 
-#content > div:last-of-type h1 {
-  font-size: 50px;
-}
+  & h1 {
+    font-size: 50px;
+  }
 
-#content > div:last-of-type p {
-  font-size: 22px;
+  & p {
+    font-size: 22px;
+  }
 }
 
 /* ============================================  End of CONTENT Section  ============================================ */

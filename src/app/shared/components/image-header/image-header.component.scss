@@ -19,6 +19,8 @@
  * ================================================================================================================== */
 
 @import "src/app/styles/colors";
+@import "src/app/styles/variables";
+@import "src/app/styles/functions";
 
 /* ====================================  End of GENERAL COMPONENT STYLE Section  ==================================== */
 
@@ -28,8 +30,9 @@
  * ================================================================================================================== */
 
 #header {
-  height: calc(100vh - 4rem);
-  background-color: $Shade_2;
+  position: relative;
+  height: 700px;
+  background-color: $Shade_1;
 }
 
 #header img {
@@ -37,14 +40,14 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
-  filter: brightness(60%) grayscale(50%);
+  //filter: brightness(60%) grayscale(50%);
 }
 
 #header > div {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
   margin: auto;
   top: 0;
   left: 0;
@@ -54,20 +57,23 @@
 }
 
 #header h1 {
+  @include font-stroke(1, $Font-Stroke-Color);
   margin: 15px;
-  width: 1200px;
+  font-weight: bold;
   font-size: 60px;
   text-align: center;
-  color: $Color_Light;
+  color: $Color_Contrast_White;
   white-space: pre-line;
+  //text-shadow: 0 0 6px $Shade_1;
 }
 
 #header h2 {
+  @include font-stroke(1, $Font-Stroke-Color);
   margin: 15px;
-  width: 840px;
-  font-size: 25px;
+  font-weight: bold;
+  font-size: 30px;
   text-align: center;
-  color: $Color_Light;
+  color: $Color_Contrast_White;
   white-space: pre-line;
 }
 

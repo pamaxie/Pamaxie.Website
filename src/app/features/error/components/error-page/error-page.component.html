@@ -1,9 +1,16 @@
-<div id="error">
+<!--
+error-page.component.html
+Pamaxie - https://Pamaxie.com/
+Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
+
+Copyright © Pamaxie™ 2021 all rights reserved
+-->
+
+<div id="content">
+  <img src="app/assets/images/bg-header.png" alt=""/>
   <div>
-    <img [src]="logo" alt=""/>
     <h1>{{headerText}}</h1>
-    <p>{{bodyText}}</p>
+    <h2>{{bodyText}}</h2>
     <a *ngFor="let info of buttonInfo" [routerLink]="info.path">{{info.text}}</a>
   </div>
-  <img [src]="image" alt=""/>
 </div>
