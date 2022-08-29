@@ -1,0 +1,64 @@
+/*!
+ input.component.scss
+ Pamaxie - https://Pamaxie.com/
+ Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
+
+ Copyright © Pamaxie™ 2021 all rights reserved
+ */
+
+/* =============================================[ input.component.scss ]============================================= *
+ *   This document contains all styling for input.component                                                           *
+ * ================================================================================================================== */
+
+@import "src/app/styles/colors";
+@import "src/app/styles/variables";
+@import "src/app/styles/functions";
+
+#input {
+  margin: 20px 0;
+
+  & > div {
+    position: relative;
+    display: flex;
+    height: 45px;
+    width: 100%;
+
+    & > input {
+      position: absolute;
+      padding: 6px 8px;
+      height: inherit;
+      width: inherit;
+      background-color: $Shade_4;
+      border: 1px solid $Shade_3;
+      border-radius: 2px;
+      font-size: 16px;
+      color: $Color_Textual_White;
+      outline: none;
+
+      &:focus,
+      &:not(:placeholder-shown) {
+        padding: 18px 10px 0 10px !important;
+
+        & + p {
+          height: 28px;
+          font-size: 11px;
+          transition: height 0.1s ease-out, font-size 0.1s ease-out;
+        }
+      }
+    }
+
+    & > p {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      padding: 12px 11px;
+      height: 100%;
+      width: inherit;
+      font-size: 18px;
+      color: $Color_Textual_White;
+      user-select: none;
+      pointer-events: none;
+      transition: height 0.1s ease-in, font-size 0.1s ease-in;
+    }
+  }
+}

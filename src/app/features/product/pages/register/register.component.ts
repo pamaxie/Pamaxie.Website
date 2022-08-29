@@ -8,7 +8,7 @@
 
 //CORE IMPORTS
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators} from "@angular/forms";
 
 //SERVICE IMPORTS
 import {AuthService} from "../../services/auth.service";
@@ -21,18 +21,22 @@ import {FormValidationService} from "../../services/form-validation.service";
 })
 export class RegisterComponent implements OnInit {
   form: FormGroup;
-  readPrivacy: boolean = false;
-  readTOS: boolean = false;
-  readCOS: boolean = false;
+  formSubmitAttempt: boolean = false;
 
-  currentSelectedDay: string = "Day"
   optionsDay: string[] = Array(31).fill("").map((_, i) => 1 + i).map(String);
-
-  currentSelectedMonth: string = "Month"
   optionsMonth: string[] = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-  currentSelectedYear: string = "Year"
   optionsYear: string[] = Array(200).fill("").map((_, i) => (new Date()).getFullYear() - i).map(String);
+
+  get getData() {
+    return {
+      firstname: this.form.controls['username'].value,
+      lastname: this.form.controls['lastname'].value,
+      username: this.form.controls['username'].value,
+      email: this.form.controls['email'].value,
+      password: this.form.controls['password'].value,
+      dayOfBirth: new Date(+this.form.controls['dayOfBirthYear'].value, this.optionsMonth.indexOf(this.form.controls['dayOfBirthMonth'].value), +this.form.controls['dayOfBirthDay'].value)
+    }
+  };
 
   constructor(private fb: FormBuilder, private authService: AuthService) {
     this.form = this.fb.group({
@@ -41,7 +45,10 @@ export class RegisterComponent implements OnInit {
       username: ['', Validators.required],
       email: ['', Validators.required],
       password: ['', Validators.required],
-      repeatPassword: ['', Validators.required],
+      repeatPassword: ['', { validator: this.checkPasswords }],
+      dayOfBirthDay: ['', Validators.required],
+      dayOfBirthMonth: ['', Validators.required],
+      dayOfBirthYear: ['', Validators.required],
       privacy: ['', Validators.required],
       tos: ['', Validators.required],
       cos: ['', Validators.required]
@@ -49,20 +56,32 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    //this.form.valueChanges.subscribe(console.log);
   }
 
-  get username() {
-    return this.form.controls['username'].value;
+  checkPasswords: ValidatorFn = (group: AbstractControl):  ValidationErrors | null => {
+    let pass = group.get('password')?.value;
+    let confirmPass = group.get('repeatPassword')?.value
+    return pass === confirmPass ? null : { notSame: true }
   }
 
-  get password() {
-    return this.form.controls['password'];
+  isFieldValid(field: string) {
+    let formField = this.form.get(field);
+
+    if (formField != undefined)
+    {
+      return (!formField.valid && formField.touched) || (formField.untouched && this.formSubmitAttempt);
+    }
+
+    return false;
   }
 
-  @FormValidationService.ValidateForm("form")
-  request() {
-    const val = this.form.value;
-    console.log(val);
+  onSubmit() {
+    console.log(this.getData);
+    this.formSubmitAttempt = true;
+    if (this.form.valid) {
+      console.log('Success');
+    }
+    console.log('failure');
   }
-
 }

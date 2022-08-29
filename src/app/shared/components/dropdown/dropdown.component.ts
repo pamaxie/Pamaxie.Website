@@ -6,34 +6,56 @@
  Copyright © Pamaxie™ 2021 all rights reserved
  */
 
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, forwardRef, Input, Output} from '@angular/core';
+import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
 
 @Component({
   selector: 'app-dropdown',
   templateUrl: './dropdown.component.html',
-  styleUrls: ['./dropdown.component.scss']
+  styleUrls: ['./dropdown.component.scss'],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => DropdownComponent),
+      multi: true
+    }
+  ]
 })
-export class DropdownComponent implements OnInit {
+export class DropdownComponent implements ControlValueAccessor {
   @Input() options: string[] = [];
+  @Input() template: string = "";
+
   @Output() currentSelectedChange = new EventEmitter<string>();
+
+  currentSelected: string = "";
   isOptionsHidden: boolean = true;
   dropdownIcon: string = "▼";
 
-  _currentSelected: string = "";
-  get currentSelected() {
-    return this._currentSelected;
-  }
-
-  @Input() set currentSelected(value) {
-    this._currentSelected = value;
-    this.closeOptionsDisplay();
-  }
-
+  private onChange = (value: string) => {
+  };
+  private onTouch = (value: string) => {
+  };
 
   constructor() {
   }
 
-  ngOnInit(): void {
+  writeValue(value: string): void {
+    if (this.template === "")
+    {
+      this.setCurrentSelected(this.options[0]);
+    }
+    else
+    {
+      this.currentSelected = this.template;
+    }
+  }
+
+  registerOnChange(fn: any): void {
+    this.onChange = fn;
+  }
+
+  registerOnTouched(fn: any): void {
+    this.onTouch = fn;
   }
 
   toggleOptionsDisplay() {
@@ -54,9 +76,11 @@ export class DropdownComponent implements OnInit {
     this.dropdownIcon = "▲";
   }
 
-  setCurrentSelected(option: string) {
-    this.currentSelected = option;
-    this.currentSelectedChange.emit(option);
+  setCurrentSelected(value: any) {
+    this.currentSelected = value;
+    this.onChange(value);
+    this.onTouch(value);
+    this.currentSelectedChange.emit(value);
+    this.closeOptionsDisplay();
   }
-
 }

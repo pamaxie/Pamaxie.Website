@@ -1,0 +1,17 @@
+<!--
+input.component.html
+Pamaxie - https://Pamaxie.com/
+Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
+
+Copyright © Pamaxie™ 2021 all rights reserved
+-->
+
+<div id="input">
+  <div>
+    <input [type]="type" [value]="value" (change)="change($event)" placeholder=" " autocomplete="off"/>
+    <p>{{placeholder}}</p>
+  </div>
+  <!--<field-error [displayError]="isFieldValid('firstname')">
+    Please enter your first name
+  </field-error>-->
+</div>

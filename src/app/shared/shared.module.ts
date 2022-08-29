@@ -16,21 +16,27 @@ import {FormsModule} from '@angular/forms';
 import {ImageHeaderComponent} from './components/image-header/image-header.component';
 import {DropdownComponent} from "./components/dropdown/dropdown.component";
 import { ClickOutsideDirective } from './directives/click-outside.directive';
+import { FieldErrorComponent } from './components/field-error/field-error.component';
+import { InputComponent } from './components/input/input.component';
 
 @NgModule({
   imports: [CommonModule, FormsModule],
   declarations: [
     ImageHeaderComponent,
     DropdownComponent,
-    ClickOutsideDirective
+    ClickOutsideDirective,
+    FieldErrorComponent,
+    InputComponent
   ],
   providers: [],
-  exports: [
-    CommonModule,
-    FormsModule,
-    ImageHeaderComponent,
-    DropdownComponent
-  ]
+    exports: [
+        CommonModule,
+        FormsModule,
+        ImageHeaderComponent,
+        DropdownComponent,
+        FieldErrorComponent,
+        InputComponent
+    ]
 })
 export class SharedModule {
 }

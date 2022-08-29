@@ -7,7 +7,9 @@ Copyright © Pamaxie™ 2021 all rights reserved
 -->
 
 <div id="dropdown" (clickOutside)="closeOptionsDisplay()">
-  <button (click)="toggleOptionsDisplay()" [attr.icon]="dropdownIcon">{{currentSelected}}</button>
+  <button (click)="toggleOptionsDisplay()" [attr.icon]="dropdownIcon">
+    {{currentSelected === "" ? template === "" ? this.options[0] : template : currentSelected}}
+  </button>
   <div [hidden]="isOptionsHidden">
     <p *ngFor="let option of options" (click)="setCurrentSelected(option)">{{option}}</p>
   </div>

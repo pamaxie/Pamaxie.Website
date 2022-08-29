@@ -66,49 +66,52 @@
 
 #content > form > div:nth-of-type(-n+6) {
   //Style for information input fields
-  position: relative;
-  display: flex;
   margin: 20px 0;
-  height: 50px;
-  width: 100%;
 
-  & > input[type="text"],
-  & > input[type="password"] {
-    position: absolute;
-    padding: 8px 10px;
-    height: inherit;
-    width: inherit;
-    background-color: $Shade_4;
-    border: 1px solid $Shade_3;
-    border-radius: 2px;
-    font-size: 18px;
-    color: $Color_Textual_White;
-    outline: none;
+  & > div {
+    position: relative;
+    display: flex;
+    height: 45px;
+    width: 100%;
 
-    &:focus,
-    &:not(:placeholder-shown) {
-      padding: 18px 10px 0 10px !important;
+    & > input[type="text"],
+    & > input[type="password"] {
+      position: absolute;
+      padding: 6px 8px;
+      height: inherit;
+      width: inherit;
+      background-color: $Shade_4;
+      border: 1px solid $Shade_3;
+      border-radius: 2px;
+      font-size: 16px;
+      color: $Color_Textual_White;
+      outline: none;
 
-      & + p {
-        height: 28px;
-        font-size: 13px;
-        transition: height 0.1s ease-out, font-size 0.1s ease-out;
+      &:focus,
+      &:not(:placeholder-shown) {
+        padding: 18px 10px 0 10px !important;
+
+        & + p {
+          height: 28px;
+          font-size: 11px;
+          transition: height 0.1s ease-out, font-size 0.1s ease-out;
+        }
       }
     }
-  }
 
-  & > p {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    padding: 8px 10px;
-    height: 100%;
-    width: inherit;
-    font-size: 18px;
-    color: $Color_Textual_White;
-    user-select: none;
-    pointer-events: none;
-    transition: height 0.1s ease-in, font-size 0.1s ease-in;
+    & > p {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      padding: 12px 11px;
+      height: 100%;
+      width: inherit;
+      font-size: 18px;
+      color: $Color_Textual_White;
+      user-select: none;
+      pointer-events: none;
+      transition: height 0.1s ease-in, font-size 0.1s ease-in;
+    }
   }
 }
 
@@ -122,64 +125,71 @@
     grid-gap: 15px;
 
     & > * {
-      height: 100%;
+      height: 45px;
       width: 100%;
     }
   }
 }
 
-#content > form > div:nth-last-of-type(-n+3) {
+#content > form > div {
   //Style for privacy, tos and coc checkboxes
-  display: flex;
-  align-items: center;
-  margin: 10px 0;
 
-  & > label {
-    position: relative;
-    display: inline-block;
-    width: 3rem;
-    height: 1.5rem;
-    border-radius: 9999px;
-    cursor: pointer;
+  &:nth-last-of-type(3) {
+    margin-top: 20px !important;
+  }
 
-    & > input[type="checkbox"] {
-      display: none;
+  &:nth-last-of-type(-n+3) {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
 
-      &:checked + div {
-        background: $Correct;
-      }
-
-      &:checked + div::after {
-        transform: translateX(Calc(3rem - 1.5rem));
-      }
-    }
-
-    & > div {
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      background-color: $Shade_4;
-      transition: 0.2s;
+    & > label {
+      position: relative;
+      display: inline-block;
+      width: 3rem;
+      height: 1.5rem;
       border-radius: 9999px;
+      cursor: pointer;
 
-      &::after {
+      & > input[type="checkbox"] {
+        display: none;
+
+        &:checked + div {
+          background: $Correct;
+        }
+
+        &:checked + div::after {
+          transform: translateX(Calc(3rem - 1.5rem));
+        }
+      }
+
+      & > div {
         position: absolute;
-        content: '';
-        aspect-ratio: 1 / 1;
-        height: Calc(100% - 4px);
-        background-color: $Shade_2;
-        left: 2px;
-        bottom: 2px;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $Shade_4;
         transition: 0.2s;
         border-radius: 9999px;
-      }
-    }
 
-    & + p {
-      padding: 0 10px;
-      font-size: 14px;
+        &::after {
+          position: absolute;
+          content: '';
+          aspect-ratio: 1 / 1;
+          height: Calc(100% - 4px);
+          background-color: $Shade_2;
+          left: 2px;
+          bottom: 2px;
+          transition: 0.2s;
+          border-radius: 9999px;
+        }
+      }
+
+      & + p {
+        padding: 0 10px;
+        font-size: 14px;
+      }
     }
   }
 }
