@@ -7,7 +7,7 @@
  */
 
 import {Component, forwardRef, Input, OnInit} from '@angular/core';
-import {ControlValueAccessor, FormBuilder, FormGroup, NG_VALUE_ACCESSOR} from "@angular/forms";
+import {ControlValueAccessor, FormGroup, FormGroupDirective, NG_VALUE_ACCESSOR} from "@angular/forms";
 
 @Component({
   selector: 'app-input',
@@ -22,6 +22,9 @@ import {ControlValueAccessor, FormBuilder, FormGroup, NG_VALUE_ACCESSOR} from "@
   ]
 })
 export class InputComponent implements OnInit, ControlValueAccessor {
+  @Input() formControlName = "";
+
+  fg: FormGroup | undefined;
   value: string = "";
 
   @Input() type: string = "";
@@ -32,10 +35,11 @@ export class InputComponent implements OnInit, ControlValueAccessor {
   private onTouch = (value: any) => {
   };
 
-  constructor() {
+  constructor(private rootFormGroup: FormGroupDirective) {
   }
 
   ngOnInit(): void {
+    this.fg = this.rootFormGroup.control;
   }
 
   writeValue(value: string): void {
@@ -55,5 +59,9 @@ export class InputComponent implements OnInit, ControlValueAccessor {
     this.value = value != undefined ? value : "";
     this.onChange(value);
     this.onTouch(value);
+  }
+
+  isFieldValid() {
+    return this.fg?.controls[this.formControlName].valid;
   }
 }

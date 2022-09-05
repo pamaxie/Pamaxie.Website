@@ -35,7 +35,7 @@
   height: 4rem;
   width: 100%;
   background-color: transparent;
-  color: $Color_Contrast_White;
+  color: $light-primary-text;
   z-index: 1;
 }
 
@@ -49,7 +49,7 @@
   & > a {
     margin: 0 20px;
     font-size: 25px;
-    color: $Color_Contrast_White;
+    color: $light-primary-text;
   }
 }
 
@@ -59,7 +59,7 @@
   & > a {
     text-align: center;
     font-size: 30px;
-    color: $Color_Textual_White;
+    color: $light-secondary-text;
     cursor: pointer;
   }
 }

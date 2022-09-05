@@ -34,16 +34,18 @@
   border-width: 0;
 }
 
-html {
+html, body {
   height: 100%;
-  overflow-y: scroll;
+}
+
+html {
   font-family: Quicksand, serif;
   line-height: 1.5;
+  overflow-y: scroll;
 }
 
 body {
   margin: 0;
-  width: 100%;
 }
 
 .openDyslexic {
@@ -53,13 +55,13 @@ body {
 h1, h2, p, span {
   margin: 0;
   font-weight: normal;
-  color: $Color_Textual_White;
+  color: $light-secondary-text;
 }
 
 a {
-  @include link_hover($Color_Link);
-  @include link_active($Color_Link);
-  color: $Color_Link;
+  @include link_hover($color-link);
+  @include link_active($color-link);
+  color: $color-link;
   cursor: pointer;
   text-decoration: inherit;
 }
@@ -71,6 +73,12 @@ a {
 
 ::-webkit-scrollbar-thumb {
   background-color: #1F1F1F;
+}
+
+app-checkbox,
+app-input,
+app-dropdown {
+  display: block;
 }
 
 /* ==============================================  End of APP Section  ============================================== */

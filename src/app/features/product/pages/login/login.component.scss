@@ -32,7 +32,7 @@
 #content {
   position: relative;
   height: 100vh;
-  background-color: $Page_Background;
+  background-color: $page-background;
 }
 
 #content img {
@@ -53,7 +53,7 @@
   padding: 20px 140px;
   height: fit-content;
   width: 720px;
-  background-color: $Shade_2;
+  background-color: $shade-2;
   box-shadow: 0 4.8px 14.4px rgba(0, 0, 0, 0.18), 0 25.6px 57.6px rgba(0, 0, 0, 0.22);
   border-radius: 2px;
 }
@@ -78,11 +78,11 @@
     padding: 8px 10px;
     height: inherit;
     width: inherit;
-    background-color: $Shade_4;
-    border: 1px solid $Shade_3;
+    background-color: $shade-4;
+    border: 1px solid $shade-3;
     border-radius: 2px;
     font-size: 18px;
-    color: $Color_Textual_White;
+    color: $light-secondary-text;
     outline: none;
 
     &:focus,
@@ -105,7 +105,7 @@
     height: 100%;
     width: inherit;
     font-size: 18px;
-    color: $Color_Textual_White;
+    color: $light-secondary-text;
     user-select: none;
     pointer-events: none;
     transition: height 0.1s ease-in, font-size 0.1s ease-in;
@@ -130,7 +130,7 @@
       display: none;
 
       &:checked + div {
-        background: $Correct;
+        background: $correct;
       }
 
       &:checked + div::after {
@@ -144,7 +144,7 @@
       top: 0;
       right: 0;
       bottom: 0;
-      background-color: $Shade_4;
+      background-color: $shade-4;
       transition: 0.2s;
       border-radius: 9999px;
 
@@ -153,7 +153,7 @@
         content: '';
         aspect-ratio: 1 / 1;
         height: Calc(100% - 4px);
-        background-color: $Shade_2;
+        background-color: $shade-2;
         left: 2px;
         bottom: 2px;
         transition: 0.2s;
@@ -169,16 +169,16 @@
 }
 
 #content > form > button {
-  @include button_hover($Color_Primary);
-  @include button_active($Color_Primary);
+  @include button_hover($color-primary);
+  @include button_active($color-primary);
   display: block;
   margin: 30px auto 10px auto;
   width: 10rem;
   height: 2.5rem;
-  background-color: $Color_Primary;
+  background-color: $color-primary;
   border-radius: 2px;
   font-size: 16px;
-  color: $Color_Textual_White;
+  color: $light-secondary-text;
   cursor: pointer;
 }
 

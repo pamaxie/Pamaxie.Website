@@ -11,15 +11,13 @@
  *   You can add global styles to this file, and also import other style files                                        *
  *                                                                                                                    *
  *   Table of Content                                                                                                 *
- *   - General                                                                                                        *
+ *   - Pamaxie                                                                                                        *
  * ================================================================================================================== */
 
-
-/* ===================================================[ GENERAL ]==================================================== *
+/* ===================================================[ PAMAXIE ]==================================================== *
  *   Contains imports, variables and general styling for the website                                                  *
  * ================================================================================================================== */
 
-@import "src/app/styles/colors";
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 
 @font-face {
@@ -29,13 +27,5 @@
   font-weight: normal;
 }
 
-html, body {
-  height: 100%;
-}
+/* ============================================  End of PAMAXIE Section  ============================================ */
 
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}
-
-/* ============================================  End of GENERAL Section  ============================================ */

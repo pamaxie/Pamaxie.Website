@@ -49,9 +49,9 @@ export class RegisterComponent implements OnInit {
       dayOfBirthDay: ['', Validators.required],
       dayOfBirthMonth: ['', Validators.required],
       dayOfBirthYear: ['', Validators.required],
-      privacy: ['', Validators.required],
-      tos: ['', Validators.required],
-      cos: ['', Validators.required]
+      privacy: ['', Validators.requiredTrue],
+      tos: ['', Validators.requiredTrue],
+      cos: ['', Validators.requiredTrue]
     });
   }
 
@@ -77,11 +77,12 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.getData);
+    console.log(this.form.value);
+    //console.log(this.getData);
     this.formSubmitAttempt = true;
     if (this.form.valid) {
-      console.log('Success');
+      //console.log('Success');
     }
-    console.log('failure');
+    //console.log('failure');
   }
 }

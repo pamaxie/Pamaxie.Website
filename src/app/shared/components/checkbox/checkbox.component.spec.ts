@@ -1,5 +1,5 @@
 /*
- field-error.component.spec.ts
+ checkbox.component.spec.ts
  Pamaxie - https://Pamaxie.com/
  Licensed under the Apache 2.0 Licensing - http://www.apache.org/licenses/
 
@@ -8,21 +8,21 @@
 
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FieldErrorComponent } from './field-error.component';
+import { CheckboxComponent } from './checkbox.component';
 
-describe('FieldErrorComponent', () => {
-  let component: FieldErrorComponent;
-  let fixture: ComponentFixture<FieldErrorComponent>;
+describe('CheckboxComponent', () => {
+  let component: CheckboxComponent;
+  let fixture: ComponentFixture<CheckboxComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FieldErrorComponent ]
+      declarations: [ CheckboxComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FieldErrorComponent);
+    fixture = TestBed.createComponent(CheckboxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

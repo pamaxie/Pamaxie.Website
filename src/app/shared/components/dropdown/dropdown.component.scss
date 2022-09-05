@@ -24,12 +24,12 @@
     padding: 8px 10px;
     height: inherit;
     width: inherit;
-    background-color: $Shade_4;
-    border: 1px solid $Shade_3;
+    background-color: $shade-4;
+    border: 1px solid $shade-3;
     border-radius: 2px;
     text-align: left;
     font-size: 18px;
-    color: $Color_Textual_White;
+    color: $light-secondary-text;
     cursor: pointer;
 
     &:after {
@@ -49,8 +49,8 @@
     position: absolute;
     max-height: 200px;
     width: inherit;
-    background-color: $Shade_3;
-    border: 1px solid $Shade_2;
+    background-color: $shade-3;
+    border: 1px solid $shade-2;
     overflow-y: scroll;
     z-index: 10;
 
@@ -59,7 +59,7 @@
       cursor: pointer;
 
       &:hover {
-        @include button_hover($Shade_3)
+        @include button_hover($shade-3)
       }
     }
   }

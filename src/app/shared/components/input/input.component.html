@@ -8,10 +8,11 @@ Copyright © Pamaxie™ 2021 all rights reserved
 
 <div id="input">
   <div>
-    <input [type]="type" [value]="value" (change)="change($event)" placeholder=" " autocomplete="off"/>
+    <input *ngIf="placeholder !== ''" [type]="type" [value]="value" (change)="change($event)" [placeholder]="placeholder" autocomplete="off"/>
+    <input *ngIf="placeholder === ''" [type]="type" [value]="value" (change)="change($event)" autocomplete="off"/>
     <p>{{placeholder}}</p>
   </div>
-  <!--<field-error [displayError]="isFieldValid('firstname')">
+  <!--<p *ngIf="!isFieldValid()">
     Please enter your first name
-  </field-error>-->
+  </p>-->
 </div>

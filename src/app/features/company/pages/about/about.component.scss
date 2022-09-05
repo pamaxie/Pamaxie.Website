@@ -33,7 +33,7 @@
   justify-items: center;
   grid-gap: 60px;
   padding: 80px 125px;
-  background-color: $Page_Background;
+  background-color: $page-background;
   text-align: center;
 }
 
@@ -42,11 +42,11 @@
     font-size: 50px;
 
     & > span:first-of-type {
-      color: $Color_Primary;
+      color: $color-primary;
     }
 
     & > span:last-of-type {
-      color: $Color_Primary;
+      color: $color-primary;
     }
   }
 
@@ -64,7 +64,7 @@
 
       & h1 {
         font-size: 30px;
-        color: $Color_Primary;
+        color: $color-primary;
       }
     }
   }

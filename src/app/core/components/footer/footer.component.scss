@@ -33,7 +33,7 @@
   justify-items: center;
   padding: 40px 30px;
   height: 18rem;
-  background-color: $Shade_1;
+  background-color: $shade-1;
 }
 
 #footer > p {
@@ -41,7 +41,7 @@
   margin: auto 0;
   font-size: 45px;
   text-align: center;
-  color: $Color_Link;
+  color: $color-link;
 }
 
 #footer > div:first-of-type {
@@ -58,7 +58,7 @@
     height: 2px;
     width: 100%;
     border-radius: 4px;
-    background-color: $Shade_2;
+    background-color: $shade-2;
   }
 
   & > div:last-of-type {
@@ -94,13 +94,13 @@
     height: 2px;
     width: 100%;
     border-radius: 4px;
-    background-color: $Shade_2;
+    background-color: $shade-2;
   }
 
   & a {
     margin: 0 10px;
     font-size: 16px;
-    color: $Color_Link;
+    color: $color-link;
 
     & + a {
       margin-top: 5px;

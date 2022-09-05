@@ -22,28 +22,9 @@ Copyright © Pamaxie™ 2021 all rights reserved
       <app-dropdown formControlName="dayOfBirthMonth" [options]="optionsMonth" template="Month"></app-dropdown>
       <app-dropdown formControlName="dayOfBirthYear" [options]="optionsYear" template="Year"></app-dropdown>
     </div>
-    <div>
-      <label>
-        <input formControlName="privacy" type="checkbox"/>
-        <div></div>
-      </label>
-      <p>I have read and agree to the <a routerLink="/privacy">privacy policy</a></p>
-    </div>
-    <div>
-      <label>
-        <input formControlName="tos" type="checkbox"/>
-        <div></div>
-      </label>
-      <p>I have read and agree to the <a routerLink="/tos">terms of service</a></p>
-    </div>
-    <div>
-      <label>
-        <input formControlName="cos" type="checkbox"/>
-        <div></div>
-      </label>
-      <p>I have read and agree to the <a routerLink="/cod">code of conduct</a></p>
-    </div>
+    <app-checkbox formControlName="privacy">I have read and agree to the <a routerLink="/privacy">privacy policy</a></app-checkbox>
+    <app-checkbox formControlName="tos">I have read and agree to the <a routerLink="/tos">terms of service</a></app-checkbox>
+    <app-checkbox formControlName="cos">I have read and agree to the <a routerLink="/cod">code of conduct</a></app-checkbox>
     <button (click)="onSubmit()">Request Access</button>
   </form>
 </div>
-<!--[disabled]="form.invalid && formDirective.submitted"-->
