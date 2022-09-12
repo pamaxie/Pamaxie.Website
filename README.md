@@ -1,6 +1,5 @@
 # Pamaxie.Website
 [![Node.js CI](https://github.com/pamaxie/Pamaxie.Website/actions/workflows/node.js.yml/badge.svg)](https://github.com/pamaxie/Pamaxie.Website/actions/workflows/node.js.yml)
-[![Build and deploy container app to Azure Web App - pamaxie](https://github.com/pamaxie/Pamaxie.Website/actions/workflows/main_pamaxie.yml/badge.svg)](https://github.com/pamaxie/Pamaxie.Website/actions/workflows/main_pamaxie.yml)
 
 ## About
 This is the official website for pamaxie. We use it kind of like a management interface, other users can use it to sign up for our public api and use it (free for non-commercial users). This allows them to manage their individual applications (and API tokens) and their account with us and how they receive news and updates about our project.
