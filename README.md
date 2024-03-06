@@ -8,6 +8,6 @@ This is the official website for pamaxie. We are currently undergoing a framewor
 
 We are also working on a major rewrite to allow for things like blogposts and make certain things a bit clearer since we want to change the direction a bit since we last worked on Pamaxie (We wanna make it easily accessible and self hostable and potentially make a "box").
 
-#### Possible thanks to:
+#### Made possible by the help of:
 
 ![**Federal Ministry Of Research and education**](https://i.imgur.com/riyuVGf.jpg) ![**Federal Ministry Of Research and education**](https://i.imgur.com/GI9XILN.png)
